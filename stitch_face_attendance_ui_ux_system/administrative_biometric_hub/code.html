@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"inverse-on-surface":"#f6f0e4","on-tertiary-container":"#998e7d","on-background":"#1d1c14","on-primary-container":"#898f9a","on-primary-fixed-variant":"#414751","on-tertiary":"#ffffff","on-primary-fixed":"#161c25","surface-tint":"#595f69","tertiary-container":"#2e271b","surface":"#fff9ed","surface-container-highest":"#e8e2d6","surface-container-lowest":"#ffffff","on-error-container":"#93000a","outline":"#75777c","tertiary-fixed":"#eee1ce","inverse-surface":"#333028","error-container":"#ffdad6","on-surface":"#1d1c14","tertiary-fixed-dim":"#d2c5b3","on-surface-variant":"#45474b","surface-bright":"#fff9ed","secondary-fixed":"#dee2ed","background":"#fff9ed","on-secondary":"#ffffff","surface-container-high":"#ede8dc","on-tertiary-fixed-variant":"#4e4638","primary":"#0d131c","secondary-fixed-dim":"#c2c7d0","primary-fixed":"#dde3ef","on-error":"#ffffff","error":"#ba1a1a","outline-variant":"#c5c6cb","surface-variant":"#e8e2d6","inverse-primary":"#c1c7d3","surface-container-low":"#f9f3e7","on-secondary-fixed":"#171c23","secondary-container":"#dee2ed","on-primary":"#ffffff","on-tertiary-fixed":"#211b0f","tertiary":"#191308","on-secondary-container":"#60656d","surface-dim":"#dfd9ce","on-secondary-fixed-variant":"#42474f","surface-container":"#f3ede1","primary-fixed-dim":"#c1c7d3","secondary":"#5a5f67","primary-container":"#222831"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","margin":"2rem"},"fontFamily":{"headline-md":["Bricolage Grotesque"],"label-technical":["Inter"],"display-lg-mobile":["Bricolage Grotesque"],"headline-sm":["Bricolage Grotesque"],"headline-lg":["Bricolage Grotesque"],"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Bricolage Grotesque"],"body-sm":["Inter"],"display-lg":["Bricolage Grotesque"],"label-lg":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-technical":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(34,40,49,0.06)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Face Attendance Biometric Brandmark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeOMPZgJ6eSB8xAJGvqIySdI5NBBFSB9uYmaEbRWck5xIXkxlcAqFB5JJCYUmwINZtwJReSzN-HgC2R9qSkeIWEDTH0kxux4kV-jRUQyB50TBx5YBZLvU1-rt5dsLKwAPHHT-lIfzm007I2iogdXvnaUPfuH7bAqu8N_IqY4Jdm8JgeA3b2-R453pAzBohyVVXbYDYgr84XJkJjrIPg2ta-9ix62j3Ip4pFpgINR9BcuS5XbHOCk55pUI"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Face Attendance</span><span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider mt-0.5">Academic Biometric Ledger</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-lg"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-technical text-label-technical text-on-surface uppercase">Biometric Engine: Active / Online</span></div><button aria-label="Notifications" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-md pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqU5VoC-gB4l2eWpON5EUaQ5UW65TZwKONBv085kdMa7hJf_7bKxi4ljDXx8ZMd261Eb-IeCRZqcFpRYCo8zFZFagwJNLUeKx2lMvqa5GjYTofbhnaFz9WAMgMoF1v8ncZ9gO7JErumCuTohhFPQSWvHULvkrUeqOdX60q3_dkctFfnDn9yaSSkiFrT-x4GLbvQzmxd7ITz7HGSTP459USvmI1nKigjQgd3kSa_1gP0r3LYb627Y3d"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-snug">Dr. Elena Rostova</span><span class="font-label-technical text-label-technical text-on-surface-variant">Dept. of Computer Science</span></div><div class="hidden sm:flex items-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low z-40 flex flex-col py-space-md shadow-[0_1px_8px_rgba(34,40,49,0.04)] overflow-y-auto"><div class="px-space-md mb-space-sm"><span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider">User Section</span></div><nav class="px-space-sm space-y-1 mb-space-lg" data-active-classes="bg-primary-container text-on-primary font-label-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="mark-attendance" href="#"><span class="material-symbols-outlined text-[18px]">center_focus_strong</span><span>Mark Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="register-face" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Register Face</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="my-attendance" href="#"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span><span>My Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="correction-requests" href="#"><span class="material-symbols-outlined text-[18px]">edit_calendar</span><span>Correction Requests</span></a></nav><div class="px-space-md mb-space-sm"><span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider">Administrative Console</span></div><nav class="px-space-sm space-y-1 flex-1" data-active-classes="bg-primary-container text-on-primary font-label-lg shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-all bg-primary-container text-on-primary font-label-lg shadow-sm" data-path="admin-overview" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>Admin Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="directory-and-users" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Directory & Users</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="master-attendance" href="#"><span class="material-symbols-outlined text-[18px]">table_chart</span><span>Master Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="biometric-logs-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Biometric Logs & Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>System Settings</span></a></nav><div class="px-space-md pt-space-sm"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-technical text-label-technical text-on-surface-variant">TERMINAL</span><span class="font-label-technical text-label-technical text-on-surface font-bold">BUILD-74.9F</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">terminal</span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface min-h-screen px-gutter py-space-xl"><div class="flex flex-col w-full">
+<!-- SECTION 1: HEADER & TELEMETRY CONTROLS -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">Central Biometric Ledger • Node Alpha-01</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">University Biometric Administration & Oversight</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">All Faculties • Central Registry Synchronization Active (Latency: 14ms)</p>
+</div>
+<!-- Quick Control Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-2 px-space-md py-2 bg-surface-container rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Today: Thursday, Oct 24, 2024</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">arrow_drop_down</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-lg font-label-md text-label-md transition-all active:scale-[0.99] shadow-sm" id="btnExportCsv">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Master CSV</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-primary-container text-on-primary hover:bg-primary rounded-lg font-label-md text-label-md transition-all active:scale-[0.99] shadow-sm">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Add Faculty / Staff</span>
+</button>
+</div>
+</div>
+<!-- SECTION 2: ATTENDANCE KPI TELEMETRY STRIP -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-xl">
+<!-- Card 1: Total Enrolled -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-technical text-label-technical uppercase tracking-wider">Total Enrolled Registry</span>
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-bold" data-counter="1420">1,420</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">profiles</span>
+</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant mt-1">100% Biometric Vectors Synced</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-highest"></div>
+</div>
+<!-- Card 2: Present Today -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-technical text-label-technical uppercase tracking-wider">Present Today</span>
+<span class="flex items-center gap-1 font-label-technical text-label-technical px-2 py-0.5 rounded-full bg-surface-container text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 91.8%
+        </span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-bold" data-counter="1304">1,304</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 1,420</span>
+</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant mt-1">Faculty & Staff Cleared On-Campus</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary"></div>
+</div>
+<!-- Card 3: Late Arrivals -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-technical text-label-technical uppercase tracking-wider">Late Arrivals</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">schedule</span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-tertiary-container tracking-tight font-bold" data-counter="28">28</span>
+<span class="font-label-md text-label-md text-on-surface-variant">>09:15 AM</span>
+</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant mt-1">Grace Period Overrides Applied</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-tertiary-container"></div>
+</div>
+<!-- Card 4: Unaccounted / Absent -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-technical text-label-technical uppercase tracking-wider">Unaccounted / Absent</span>
+<span class="material-symbols-outlined text-[20px] text-error">person_off</span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-error tracking-tight font-bold" data-counter="42">42</span>
+<span class="font-label-md text-label-md text-on-surface-variant">absentees</span>
+</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant mt-1">14 On Approved Sabbatical/Leave</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-error"></div>
+</div>
+<!-- Card 5: Pending Petitions -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-technical text-label-technical uppercase tracking-wider">Correction Petitions</span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-bold" data-counter="6">6</span>
+<span class="font-label-md text-label-md text-error font-semibold">Action Req.</span>
+</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant mt-1">Requires Admin Verification</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-outline"></div>
+</div>
+</div>
+<!-- SECTION 3: ASYMMETRIC ANALYTICS DISTRIBUTION -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left 8/12: Hourly Velocity Chart -->
+<div class="lg:col-span-8 p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider">Optical Throughput Telemetry</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Hourly Check-in Velocity & Terminal Load</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary"></span>
+<span class="font-label-technical text-label-technical text-on-surface">Verified Inflow</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-container-highest"></span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">Gate Baseline</span>
+</div>
+</div>
+</div>
+<!-- Peak Banner Callout -->
+<div class="mb-space-md p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+<span class="font-body-sm text-body-sm text-on-surface">Peak Arrival Window Detected: <strong>08:30 AM – 09:15 AM</strong></span>
+</div>
+<div class="font-label-technical text-label-technical bg-surface-container-lowest px-2 py-1 rounded text-primary font-bold">
+          PEAK: 142 SCANS / MIN @ 08:45 AM
+        </div>
+</div>
+<!-- Vector Area/Bar Chart (Inline SVG < 2KB) -->
+<div class="w-full h-64 relative flex items-end pt-6">
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 680 200">
+<defs>
+<lineargradient id="velocityGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0d131c" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#0d131c" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#e8e2d6" stroke-width="1" x1="0" x2="680" y1="180" y2="180"></line>
+<line stroke="#e8e2d6" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="130" y2="130"></line>
+<line stroke="#e8e2d6" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="80" y2="80"></line>
+<line stroke="#e8e2d6" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="30" y2="30"></line>
+<!-- Filled Area -->
+<path d="M 0 180 L 40 178 L 90 172 L 140 160 L 190 140 L 240 100 L 290 50 L 330 20 L 370 42 L 420 85 L 470 120 L 520 145 L 570 162 L 620 170 L 680 175 L 680 180 Z" fill="url(#velocityGrad)"></path>
+<!-- Primary Velocity Stroke -->
+<path d="M 0 180 Q 40 178 90 172 T 190 140 T 290 50 T 330 20 T 370 42 T 470 120 T 570 162 T 680 175" stroke="#0d131c" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Focal Peak Marker Dot with Reticle -->
+<circle cx="330" cy="20" fill="#0d131c" r="5"></circle>
+<circle cx="330" cy="20" r="9" stroke="#0d131c" stroke-dasharray="2 2" stroke-width="1"></circle>
+<rect fill="#0d131c" height="14" rx="2" width="80" x="290" y="2"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle" x="330" y="11">08:45 AM • 142/m</text>
+</svg>
+</div>
+<!-- X-Axis Timestamps -->
+<div class="flex justify-between items-center text-on-surface-variant font-label-technical text-label-technical mt-2 pt-2 border-t-0">
+<span>07:00</span>
+<span>07:30</span>
+<span>08:00</span>
+<span class="font-bold text-primary">08:30</span>
+<span class="font-bold text-primary">09:00</span>
+<span>09:30</span>
+<span>10:00</span>
+<span>10:30</span>
+<span>11:00</span>
+</div>
+</div>
+<!-- Right 4/12: Departmental Compliance -->
+<div class="lg:col-span-4 p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider">Audit Hierarchy</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">verified</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Faculty Compliance</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-lg">Current session verification density grouped by academic division.</p>
+</div>
+<div class="space-y-space-md">
+<!-- Faculty of Medicine -->
+<div class="p-space-sm bg-surface-container rounded-lg">
+<div class="flex justify-between items-center mb-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Faculty of Medicine</span>
+<span class="font-label-technical text-label-technical font-bold text-primary">97.1%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 97.1%"></div>
+</div>
+<div class="flex justify-between items-center font-label-technical text-label-technical text-on-surface-variant mt-1">
+<span>338 of 348 Verified</span>
+<span>+1.4% vs last week</span>
+</div>
+</div>
+<!-- Faculty of Engineering -->
+<div class="p-space-sm bg-surface-container rounded-lg">
+<div class="flex justify-between items-center mb-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Faculty of Engineering</span>
+<span class="font-label-technical text-label-technical font-bold text-primary">94.2%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 94.2%"></div>
+</div>
+<div class="flex justify-between items-center font-label-technical text-label-technical text-on-surface-variant mt-1">
+<span>412 of 437 Verified</span>
+<span>Optic Hub Eng-03 Active</span>
+</div>
+</div>
+<!-- Natural Sciences -->
+<div class="p-space-sm bg-surface-container rounded-lg">
+<div class="flex justify-between items-center mb-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Natural & Formal Sciences</span>
+<span class="font-label-technical text-label-technical font-bold text-primary">93.0%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 93.0%"></div>
+</div>
+<div class="flex justify-between items-center font-label-technical text-label-technical text-on-surface-variant mt-1">
+<span>282 of 303 Verified</span>
+<span>Nominal Attendance</span>
+</div>
+</div>
+<!-- Humanities & Social Sciences -->
+<div class="p-space-sm bg-surface-container rounded-lg">
+<div class="flex justify-between items-center mb-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Humanities & Architecture</span>
+<span class="font-label-technical text-label-technical font-bold text-tertiary-container">89.5%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-700" style="width: 89.5%"></div>
+</div>
+<div class="flex justify-between items-center font-label-technical text-label-technical text-on-surface-variant mt-1">
+<span>272 of 304 Verified</span>
+<span class="text-tertiary-container font-semibold">6 Requests Pending</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center gap-1 transition-all">
+<span>View Faculty Breakdown Reports</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 4: LIVE BIOMETRIC TERMINAL STREAM & AUDIT FEED -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Viewport Feed + Live Scans -->
+<div class="lg:col-span-12 p-space-lg bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-technical text-label-technical uppercase tracking-wider text-on-surface-variant">Live Gateway Stream</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Active Optical Verification Telemetry</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-technical text-label-technical px-space-sm py-1 bg-surface-container rounded text-on-surface">Terminals Active: 18 / 18</span>
+<span class="font-label-technical text-label-technical px-space-sm py-1 bg-surface-container rounded text-on-surface">Avg Ingestion: 320ms</span>
+</div>
+</div>
+<!-- Scans Grid (4 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Live Item 1: Marcus Vance -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="relative w-12 h-12 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a male professor wearing formal attire with a crisp academic ledger aesthetic, natural lighting, sharp biometric framing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_mvXzaugvHjGG3puX8ldkSVmnMGWud2HX40CY5wz-WFSAfmHcj9i1Mwl9rTBoU2ZxnXOC4e1MLxA4f5wJ6bOKeltpdAOyW9Ie3qN1nL4AFKBn9LV4WjDHS_Kop2VcSjn9Z3_oe38EYk9iANJgkyCHHwP_VYZWgj8Ub3uVM9cZPwTCEfc1hC_vnWQRmbVnB3tWSCktusGeOiOGU0tZ22rS-OFWCOzgcrPSRn5OGE1a6GUl7yPGthsb"/>
+<!-- Corner reticles -->
+<div class="absolute top-0.5 left-0.5 w-2 h-2 border-t-2 border-l-2 border-primary"></div>
+<div class="absolute bottom-0.5 right-0.5 w-2 h-2 border-b-2 border-r-2 border-primary"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Dr. Marcus Vance</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant truncate">Faculty of Medicine</span>
+<span class="font-label-technical text-label-technical text-primary font-bold mt-1">99.7% MATCH • INSTANT</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-technical text-label-technical border-t-0">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">videocam</span>Med-01</span>
+<span class="text-on-surface font-semibold">09:41:02 AM</span>
+</div>
+</div>
+<!-- Live Item 2: Sarah Jenkins -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="relative w-12 h-12 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait of an intelligent female researcher in her thirties with glasses, neutral institutional office backdrop, soft editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVHM_o5wiJXJcM0lXmTi71dWHpqXHq0wSZTjewKFP8HRGdbp4VCUySUSxPqBsvkklyxk8T8CFarAuRqqyXv6D-nOJNbdOQNhjOenYCMuaib2fbGYRnhIQrnq46-QjMsElSy9fEtDDit7ddGtA1npZwQEsQeHQFV32YzVx7sd_JVid-IocjJ5dxdT0v2VahivoFAl29oPnkEzlBL1YDHHabgQI1g-Iyk2ULrfPK2d-DksZaZkDpExvP"/>
+<div class="absolute top-0.5 left-0.5 w-2 h-2 border-t-2 border-l-2 border-primary"></div>
+<div class="absolute bottom-0.5 right-0.5 w-2 h-2 border-b-2 border-r-2 border-primary"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Prof. Sarah Jenkins</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant truncate">Computer Science</span>
+<span class="font-label-technical text-label-technical text-primary font-bold mt-1">98.9% MATCH • VERIFIED</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-technical text-label-technical border-t-0">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">videocam</span>Eng-03</span>
+<span class="text-on-surface font-semibold">09:40:18 AM</span>
+</div>
+</div>
+<!-- Live Item 3: Alistair Finch -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="relative w-12 h-12 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Academic portrait of a mature male scholar with tailored jacket and thoughtful gaze, soft parchment interior backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa_hYdf2AD85XlDTAj1egF3J_3YLNFAlYqV7LpDcr6v16HOTSUd5aXv0Zdwflf7YxzGGlsh2CvfBdGPSOADohwuWWNTaNhd618SM6wQqGSy1trnAcD4RlzrfDCNQQ8ZIPf5gPM4fEdif6gYsL5xov62NbaUPq8mdbCQ3sk2tLctHjVFaXGZETrro1LeEDV_FwPLkMuF93LVwL7_xPE9lgaE6bPG-v4iAqTEk2hz8uHvh04yDaI07re"/>
+<div class="absolute top-0.5 left-0.5 w-2 h-2 border-t-2 border-l-2 border-primary"></div>
+<div class="absolute bottom-0.5 right-0.5 w-2 h-2 border-b-2 border-r-2 border-primary"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Dr. Alistair Finch</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant truncate">School of Architecture</span>
+<span class="font-label-technical text-label-technical text-primary font-bold mt-1">99.1% MATCH • VERIFIED</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-technical text-label-technical border-t-0">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">videocam</span>Arch-02</span>
+<span class="text-on-surface font-semibold">09:39:55 AM</span>
+</div>
+</div>
+<!-- Live Item 4: Warning Status Terminal -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="relative w-12 h-12 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-container text-[28px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Terminal Lib-01</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant truncate">Central Library Vestibule</span>
+<span class="font-label-technical text-label-technical text-tertiary font-bold mt-1">LOW LUX • AUTO-GAIN ADJUST</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-technical text-label-technical border-t-0">
+<span class="text-on-surface-variant">Sensor Telemetry</span>
+<span class="text-tertiary-container font-semibold">Self-Resolved (120 lx)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 5: ACTION QUEUE - URGENT CORRECTION PETITIONS -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-technical text-label-technical uppercase tracking-wider text-on-surface-variant">Administrative Action Queue</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Pending Attendance Correction Petitions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Faculty-submitted appeals regarding off-site symposiums, biometric timeouts, or medical exemptions.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-technical text-label-technical px-3 py-1.5 bg-surface-container rounded-lg text-on-surface font-semibold">
+          6 Petitions Pending Review
+        </span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-technical text-label-technical uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Faculty Member</th>
+<th class="py-3 px-space-md">Department</th>
+<th class="py-3 px-space-md">Target Date & Shift</th>
+<th class="py-3 px-space-md">Petition Reason & Proof</th>
+<th class="py-3 px-space-md">Status</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Administrative Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors" id="petition-row-1">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of an academic doctor in formal brown tweed jacket, clean institutional neutral lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANEezhCXKL8ZZBpGDo9T5WP8XPElXYSn8QK03JGcq3YakqEEh7nmh6-a9x4TbxPL7soiN1csRWaAQE8oVXlJImsk0ciVZ6Q9_F508PI7IeJ-nrtXiPAQw-m_bDzvfDpotv0XnYCffN3i2BhN1NIxnSY0FcjtxmeL3HlsSaugfYkARl8DsXQXEpZDgQThq8s2AtPbrZ-NA2E1nEsNKHD9znsoyIO1oYaCVHR3t4vP4Okat8bB9H59Ag"/>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-primary">Dr. Arthur Pendelton</div>
+<div class="font-label-technical text-label-technical text-on-surface-variant">ID: FAC-8841</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">Mechanical Engineering</span>
+</td>
+<td class="py-3.5 px-space-md font-label-technical text-label-technical">
+<div>Oct 23, 2024</div>
+<div class="text-on-surface-variant">09:00 AM - 12:30 PM</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="truncate text-on-surface font-medium">Off-Campus IEEE Symposium Lecture</div>
+<div class="text-label-technical font-label-technical text-on-surface-variant">Verified by Dean's Office memo #412</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-technical text-label-technical px-2 py-0.5 bg-surface-container text-on-surface rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Pending Dean Sign-off
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-md text-label-md rounded hover:bg-secondary transition-all" onclick="resolvePetition(1, true)">Approve</button>
+<button class="px-2.5 py-1 bg-surface-container-highest text-error font-label-md text-label-md rounded hover:bg-error-container transition-all" onclick="resolvePetition(1, false)">Reject</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors" id="petition-row-2">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of an intelligent female researcher with dark hair, warm academic tones and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp4py6tTEUYtYeBfKaFtIATFnn7RaXDe1HOQ7jyM7xQkBLm1cMFwWT9pI9OzjotNrO01pb41OkvWmFpC-t_ymFR3ClKOY6A18pIFH80bbVd5Dmq5wXVy-kYu-QXq8kJ9BL0sfNHkgz3mBuJK7wzt_bS7WbqWbVQ7M3YZkV2tDj-p-nJnByAlIvTMTkZvGQwJfrieO_fc2NB-VK93Q9pVMTweOTQTVfF8K0KAfIJDwEPOXy78f5Jmwr"/>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-primary">Prof. Clara Oswald</div>
+<div class="font-label-technical text-label-technical text-on-surface-variant">ID: FAC-2194</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">Theoretical Physics</span>
+</td>
+<td class="py-3.5 px-space-md font-label-technical text-label-technical">
+<div>Oct 22, 2024</div>
+<div class="text-on-surface-variant">08:30 AM (Check-in)</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="truncate text-on-surface font-medium">Terminal Timeout (North Gate)</div>
+<div class="text-label-technical font-label-technical text-on-surface-variant">Badge swiped at gate; optical scan misread</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-technical text-label-technical px-2 py-0.5 bg-surface-container text-on-surface rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> In Review
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-md text-label-md rounded hover:bg-secondary transition-all" onclick="resolvePetition(2, true)">Approve</button>
+<button class="px-2.5 py-1 bg-surface-container-highest text-error font-label-md text-label-md rounded hover:bg-error-container transition-all" onclick="resolvePetition(2, false)">Reject</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors" id="petition-row-3">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young male teaching assistant with spectacles and casual academic blazer, warm beige wall backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7i3wY6Fcme3MWgjkKYp46-o6jS3E3LV7OpA5625Sg59cTkl37qDUhQL6ZGq4NO4bBF8Gai1bTOwh5Sz2dI7HYllmfakBmfikTTNkqOlWIE2f5gLY3XS1gh5oVwiFfqTdCgSrqaYpVZ693-hlOh3mBbbzcQg5C9zpG76hbJqQFLmBYSuQHzS4x6oey_fW9BXyodSYe1D8js-aJi7AkMnuRCILejtZsHzEblEbN2CLESEN_RFKN3k_d"/>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-primary">Liam Zhang, Ph.D.</div>
+<div class="font-label-technical text-label-technical text-on-surface-variant">ID: FAC-9043</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">Biomedical Engineering</span>
+</td>
+<td class="py-3.5 px-space-md font-label-technical text-label-technical">
+<div>Oct 21, 2024</div>
+<div class="text-on-surface-variant">Full Day</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="truncate text-on-surface font-medium">Hospital Clinical Trials Duty</div>
+<div class="text-label-technical font-label-technical text-on-surface-variant">Pre-authorized hospital clinical shift #B-19</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-technical text-label-technical px-2 py-0.5 bg-surface-container text-on-surface rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Pending Audit
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-md text-label-md rounded hover:bg-secondary transition-all" onclick="resolvePetition(3, true)">Approve</button>
+<button class="px-2.5 py-1 bg-surface-container-highest text-error font-label-md text-label-md rounded hover:bg-error-container transition-all" onclick="resolvePetition(3, false)">Reject</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Meta -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mt-space-md pt-space-sm text-on-surface-variant font-label-technical text-label-technical">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Approvals trigger automatic retroactive synchronization with University Payroll & Registry Ledgers.</span>
+</div>
+<a class="text-primary font-semibold hover:underline flex items-center gap-1" href="#">
+<span>View Full Petition Archive (48 resolved)</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Inline Script for dynamic feedback and simulated resolution -->
+<script>
+    function resolvePetition(id, approved) {
+      const row = document.getElementById('petition-row-' + id);
+      if (!row) return;
+      
+      const badge = approved 
+        ? '<span class="px-2 py-1 bg-surface-container text-primary font-label-technical text-label-technical rounded">APPROVED • SYNCED</span>'
+        : '<span class="px-2 py-1 bg-error-container text-on-error-container font-label-technical text-label-technical rounded">REJECTED</span>';
+      
+      row.classList.add('opacity-60');
+      const actionCell = row.querySelector('td:last-child');
+      if (actionCell) {
+        actionCell.innerHTML = badge;
+      }
+    }
+
+    // Interactive export button simulation
+    const exportBtn = document.getElementById('btnExportCsv');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        const originalText = exportBtn.innerHTML;
+        exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Generating CSV...</span>';
+        setTimeout(() => {
+          exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Ledger Exported</span>';
+          setTimeout(() => {
+            exportBtn.innerHTML = originalText;
+          }, 2500);
+        }, 1200);
+      });
+    }
+  </script>
+</div></main></div></body></html>

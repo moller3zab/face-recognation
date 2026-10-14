@@ -1,0 +1,23 @@
+sequenceDiagram
+    actor Admin as Admin
+    participant View as Corrections View
+    participant CorrCtrl as CorrectionController
+    participant AttSvc as AttendanceService
+    participant DB as MariaDB Database
+    actor User as Target User
+
+    Admin->>View: Select Request & Input Admin Note -> Click Approve
+    View->>CorrCtrl: POST /admin/corrections/approve (request_id, admin_note, csrf_token)
+    CorrCtrl->>AttSvc: approveCorrection(request_id, admin_note, admin_id)
+    AttSvc->>DB: BEGIN TRANSACTION
+    AttSvc->>DB: SELECT * FROM correction_requests WHERE id = ? FOR UPDATE
+    DB-->>AttSvc: Request Record
+    AttSvc->>DB: UPDATE attendance SET check_in=?, check_out=?, status=? WHERE id=?
+    AttSvc->>DB: UPDATE correction_requests SET status='Approved', admin_note=?, reviewed_by=? WHERE id=?
+    AttSvc->>DB: INSERT INTO alerts (user_id, type, title, message) VALUES (?, 'Correction Approved', ...)
+    AttSvc->>DB: COMMIT TRANSACTION
+    DB-->>AttSvc: Transaction Committed OK
+    AttSvc-->>CorrCtrl: Success true
+    CorrCtrl-->>View: Redirect with Flash "Request Approved Successfully"
+    View-->>Admin: Render Updated Table
+    DB-->>User: User receives Alert Notification on next poll/page load

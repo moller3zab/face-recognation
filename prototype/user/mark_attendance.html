@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark Attendance — Face Scanning Showpiece</title>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">FA</div>
+        <div>
+          <div class="logo-text">FaceAttendance</div>
+          <div class="logo-sub">Student / User</div>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-label">My Navigation</li>
+        <li class="menu-item"><a href="dashboard.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg> Dashboard</a></li>
+        <li class="menu-item"><a href="mark_attendance.html" class="menu-link active"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 10l-4 4l-2 -2"/><path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18z"/></svg> Mark Attendance</a></li>
+        <li class="menu-item"><a href="register_face.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Register Face Baseline</a></li>
+        <li class="menu-item"><a href="attendance.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg> My Attendance History</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-avatar">JM</div>
+        <div class="user-info">
+          <div class="user-name">Jana Mohamed</div>
+          <div class="user-role">Student</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="navbar">
+        <div class="navbar-left">
+          <button class="mobile-toggle"><svg style="width:24px;height:24px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <div class="page-title-nav">Real-Time Facial Recognition Terminal</div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="card reveal" style="max-width: 680px; margin: 0 auto; text-align: center;">
+          <div class="card-header" style="justify-content: center;">
+            <h3 class="card-title">Biometric Check-In Scanner</h3>
+          </div>
+
+          <!-- SHOWPIECE SCANNER CONTAINER -->
+          <div class="scanner-container">
+            <!-- Corner Brackets -->
+            <div class="corner-bracket corner-tl"></div>
+            <div class="corner-bracket corner-tr"></div>
+            <div class="corner-bracket corner-bl"></div>
+            <div class="corner-bracket corner-br"></div>
+
+            <!-- Animated Scan Line -->
+            <div class="scan-line"></div>
+
+            <!-- Simulated Camera Preview Surface -->
+            <div class="video-viewport" style="background: radial-gradient(circle at center, #393E46 0%, #222831 100%); display: flex; align-items: center; justify-content: center;">
+              <svg style="width: 100px; height: 100px; color: var(--c-stone); opacity: 0.5;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+
+            <!-- Status Indicator Overlay -->
+            <div class="scanner-overlay-badge">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--c-status-present); display: inline-block;"></span>
+              <span id="scan-badge-text">Waiting for scanner...</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <button id="start-scan-btn" class="btn btn-primary" style="padding: 12px 28px; font-size: 1rem;">
+              Start Scanner Challenge
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Attendance Result Confirmation Modal -->
+  <div class="modal-overlay" id="attendance-result-modal">
+    <div class="modal-box" style="text-align: center;">
+      <div class="stat-icon present" style="margin: 0 auto 16px; width: 64px; height: 64px;">
+        <svg style="width: 32px; height: 32px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h2>Identity Verified & Attendance Recorded!</h2>
+      <p style="color: var(--c-slate); margin: 8px 0 20px;">Your biometric descriptor matches baseline record #101.</p>
+      
+      <div style="background: var(--c-sand-light); padding: 16px; border-radius: var(--radius-md); text-align: left; font-size: 0.9rem; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+          <span style="color: var(--c-slate);">User:</span>
+          <strong>Jana Mohamed</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+          <span style="color: var(--c-slate);">Status:</span>
+          <span class="badge badge-present">Present</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+          <span style="color: var(--c-slate);">Timestamp:</span>
+          <strong>2026-10-02 08:45:12 AM</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--c-slate);">Euclidean Distance ($D$):</span>
+          <strong>0.28 (Threshold: 0.60)</strong>
+        </div>
+      </div>
+
+      <button class="modal-close btn btn-primary" style="width: 100%;">Done</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/scanner_sim.js"></script>
+</body>
+</html>

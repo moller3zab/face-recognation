@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"inverse-on-surface":"#f6f0e4","on-tertiary-container":"#998e7d","on-background":"#1d1c14","on-primary-container":"#898f9a","on-primary-fixed-variant":"#414751","on-tertiary":"#ffffff","on-primary-fixed":"#161c25","surface-tint":"#595f69","tertiary-container":"#2e271b","surface":"#fff9ed","surface-container-highest":"#e8e2d6","surface-container-lowest":"#ffffff","on-error-container":"#93000a","outline":"#75777c","tertiary-fixed":"#eee1ce","inverse-surface":"#333028","error-container":"#ffdad6","on-surface":"#1d1c14","tertiary-fixed-dim":"#d2c5b3","on-surface-variant":"#45474b","surface-bright":"#fff9ed","secondary-fixed":"#dee2ed","background":"#fff9ed","on-secondary":"#ffffff","surface-container-high":"#ede8dc","on-tertiary-fixed-variant":"#4e4638","primary":"#0d131c","secondary-fixed-dim":"#c2c7d0","primary-fixed":"#dde3ef","on-error":"#ffffff","error":"#ba1a1a","outline-variant":"#c5c6cb","surface-variant":"#e8e2d6","inverse-primary":"#c1c7d3","surface-container-low":"#f9f3e7","on-secondary-fixed":"#171c23","secondary-container":"#dee2ed","on-primary":"#ffffff","on-tertiary-fixed":"#211b0f","tertiary":"#191308","on-secondary-container":"#60656d","surface-dim":"#dfd9ce","on-secondary-fixed-variant":"#42474f","surface-container":"#f3ede1","primary-fixed-dim":"#c1c7d3","secondary":"#5a5f67","primary-container":"#222831"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","margin":"2rem"},"fontFamily":{"headline-md":["Bricolage Grotesque"],"label-technical":["Inter"],"display-lg-mobile":["Bricolage Grotesque"],"headline-sm":["Bricolage Grotesque"],"headline-lg":["Bricolage Grotesque"],"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Bricolage Grotesque"],"body-sm":["Inter"],"display-lg":["Bricolage Grotesque"],"label-lg":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-technical":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface antialiased"><main class="w-full min-h-screen flex items-center justify-center p-space-md bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- Minimalist Top Academic Ribbon / Nav -->
+<header class="w-full bg-surface-container-low px-margin py-space-md shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center space-x-space-md">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center rounded-DEFAULT font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm tracking-tight text-primary">Face Attendance</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">University Biometric Verification System</p>
+</div>
+</div>
+<nav class="hidden lg:flex items-center space-x-space-lg text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors" href="#overview">System Overview</a>
+<a class="hover:text-primary transition-colors" href="#workflow">Architecture & Workflow</a>
+<a class="hover:text-primary transition-colors" href="#security">Security & Encryption</a>
+<a class="hover:text-primary transition-colors" href="#faculty">Faculty Portal</a>
+<a class="hover:text-primary transition-colors" href="#docs">Documentation</a>
+</nav>
+<div class="flex items-center space-x-space-sm">
+<button class="px-space-md py-space-xs font-label-md text-label-md text-primary bg-surface-container hover:bg-surface-container-high transition-colors rounded-DEFAULT">
+          Staff Login
+        </button>
+<button class="px-space-md py-space-xs font-label-md text-label-md bg-primary text-on-primary hover:bg-primary-container transition-colors rounded-DEFAULT shadow-sm">
+          Schedule Campus Demo
+        </button>
+</div>
+</div>
+</header>
+<!-- Editorial Hero Section -->
+<section class="w-full py-space-xl px-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Narrative -->
+<div class="lg:col-span-6 flex flex-col space-y-space-md">
+<div class="inline-flex items-center space-x-space-xs px-space-sm py-1 bg-surface-container rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-technical text-label-technical uppercase tracking-wider text-on-surface-variant">Autonomous Terminal v4.2 • Live Network</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight font-bold leading-tight">
+          Smart Attendance.<br/>Powered by Your Face.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Enterprise-grade facial biometric verification engineered for universities, research labs, and academic institutions. Millisecond identity verification, automated timetable ledgering, and spoof-proof liveness detection.
+        </p>
+<div class="pt-space-sm flex flex-wrap gap-space-md items-center">
+<button class="px-space-lg py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded-DEFAULT hover:bg-primary-container transition shadow-md flex items-center space-x-space-xs">
+<span>Access Attendance Terminal</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="px-space-lg py-space-sm bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-DEFAULT hover:bg-surface-container-highest transition flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-[18px]">csv</span>
+<span>Explore Protocols</span>
+</button>
+</div>
+<!-- Trust Badges -->
+<div class="pt-space-lg grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-DEFAULT">
+<div class="font-headline-sm text-headline-sm text-primary">FERPA / GDPR</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant uppercase mt-1">Vector Storage Only</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-DEFAULT">
+<div class="font-headline-sm text-headline-sm text-primary">0 ms</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant uppercase mt-1">Raw Photo Retention</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-DEFAULT">
+<div class="font-headline-sm text-headline-sm text-primary">99.82%</div>
+<p class="font-label-technical text-label-technical text-on-surface-variant uppercase mt-1">Neural Model Precision</p>
+</div>
+</div>
+</div>
+<!-- Right Visual: Terminal Viewport Simulation -->
+<div class="lg:col-span-6 relative">
+<div class="bg-primary-container text-inverse-on-surface rounded-DEFAULT shadow-xl overflow-hidden p-space-md relative">
+<!-- Top Telemetry Header -->
+<div class="flex items-center justify-between pb-space-sm bg-primary/40 -mx-space-md -mt-space-md px-space-md pt-space-sm mb-space-md">
+<div class="flex items-center space-x-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-bright"></span>
+<span class="font-label-technical text-label-technical uppercase tracking-wider text-surface-dim">CAM-NORTH-04 • LECTURE HALL B</span>
+</div>
+<div class="font-label-technical text-label-technical text-surface-dim uppercase">FPS: 59.94 • 1080P IR</div>
+</div>
+<!-- Active Biometric Viewport -->
+<div class="relative w-full h-80 bg-primary rounded-DEFAULT overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-70" data-alt="University student stepping in front of high-tech biometric optical gate scanner in modern warm academic lecture theater, ambient soft sand tones and technical facial reticles overlaid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6YjugJkDqiqQNCiM3nfqDBy5fYcNMleo2GGFQK9xXSwWMrTZNegjGbutDtM--sbo40eYHACnXm0CV0fItRGjQoOWimwsz37FW_HK9at5DtDW12LxcWmliO0cJGVl92C3MbiVPmUBp-QGPyBuK4Apr8CK_XIucWckfY-bcNhODG9zhlHuHfITz8PYIu36HgwKBBAwIiwkpbP7htGfTWU7_tvpF9I4h94RQdvm2DeIRAfkT6Vutlrm5"/>
+<!-- Target Reticle & Mathematical Vectors -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<!-- Corner brackets -->
+<div class="relative w-48 h-56 flex flex-col justify-between">
+<div class="flex justify-between w-full">
+<div class="w-6 h-6 border-t-2 border-l-2 border-surface-bright"></div>
+<div class="w-6 h-6 border-t-2 border-r-2 border-surface-bright"></div>
+</div>
+<!-- Center Target Dot & Coordinates -->
+<div class="flex flex-col items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-surface-bright mb-1 animate-ping"></div>
+<span class="font-label-technical text-label-technical bg-primary/80 px-2 py-0.5 text-surface-bright rounded">LOCK [X:420.4, Y:118.2]</span>
+</div>
+<div class="flex justify-between w-full">
+<div class="w-6 h-6 border-b-2 border-l-2 border-surface-bright"></div>
+<div class="w-6 h-6 border-b-2 border-r-2 border-surface-bright"></div>
+</div>
+</div>
+</div>
+<!-- Realtime Telemetry HUD Tag -->
+<div class="absolute bottom-3 left-3 right-3 bg-inverse-surface/90 backdrop-blur-sm p-space-sm rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center space-x-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-primary flex items-center justify-center font-headline-sm text-headline-sm">
+                  ✓
+                </div>
+<div>
+<div class="font-label-lg text-label-lg text-inverse-on-surface">Elena Rostova (ID: #4092-ENG)</div>
+<div class="font-label-technical text-label-technical text-surface-dim">DEPT OF QUANTUM INFORMATICS • LECTURE 08</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-technical text-label-technical text-surface-bright font-bold">99.7% MATCH</div>
+<div class="font-label-technical text-label-technical text-surface-dim">CONFIRMED 09:14:02.18</div>
+</div>
+</div>
+</div>
+<!-- Secondary Micro Metrics Bar -->
+<div class="mt-space-md grid grid-cols-3 gap-space-xs text-center">
+<div class="bg-primary/50 py-space-xs rounded-DEFAULT">
+<span class="font-label-technical text-label-technical text-surface-dim block">LIVENESS</span>
+<span class="font-label-md text-label-md text-surface-bright">DEPTH CERTIFIED</span>
+</div>
+<div class="bg-primary/50 py-space-xs rounded-DEFAULT">
+<span class="font-label-technical text-label-technical text-surface-dim block">LATENCY</span>
+<span class="font-label-md text-label-md text-surface-bright">38.4 MS</span>
+</div>
+<div class="bg-primary/50 py-space-xs rounded-DEFAULT">
+<span class="font-label-technical text-label-technical text-surface-dim block">LEDGER STATUS</span>
+<span class="font-label-md text-label-md text-surface-bright">COMMITTED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Core Feature Grid (6 Technical Pillars) -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin" id="overview">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">Architectural Pillars</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">High-Precision Academic Verification</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-space-sm md:mt-0">
+          Engineered to replace roll-calls and magnetic swipe cards with zero-contact facial biometric ledgers.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition">
+<div>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-DEFAULT mb-space-md text-primary">
+<span class="material-symbols-outlined text-[24px]">memory</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Edge Vector Embeddings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Proprietary on-terminal neural pipeline compresses optical telemetry into 512-dimension spatial vectors on isolated campus hardware nodes.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-technical text-label-technical text-primary font-bold tracking-wider uppercase">
+            Local Pipeline • Zero Latency
+          </div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition">
+<div>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-DEFAULT mb-space-md text-primary">
+<span class="material-symbols-outlined text-[24px]">sync_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Real-Time Class Ledger</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Instantaneous bi-directional synchronization with registrar timetable databases (Banner, Canvas, Blackboard, and custom SIS protocols).
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-technical text-label-technical text-primary font-bold tracking-wider uppercase">
+            REST & Webhook Bridges
+          </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition">
+<div>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-DEFAULT mb-space-md text-primary">
+<span class="material-symbols-outlined text-[24px]">visibility_lock</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Anti-Spoof Liveness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Multi-spectral micro-texture analysis, blink pulsation metrics, and parallax optical depth discard printed photos, 4K screen replays, and silicone masks.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-technical text-label-technical text-primary font-bold tracking-wider uppercase">
+            ISO/IEC 30107-3 Compliant
+          </div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition">
+<div>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-DEFAULT mb-space-md text-primary">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Attendance Predictive Models</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Proactive student retention modeling identifying absenteeism anomalies early, alerting academic advisors before mid-semester drops occur.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-technical text-label-technical text-primary font-bold tracking-wider uppercase">
+            Early Interventions
+          </div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition">
+<div>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-DEFAULT mb-space-md text-primary">
+<span class="material-symbols-outlined text-[24px]">notification_important</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Smart Faculty Alerts</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Subtle desktop HUD notifications informing professors of late entrances, unauthorized sit-ins, or sudden cohort roster discrepancies.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-technical text-label-technical text-primary font-bold tracking-wider uppercase">
+            Zero Lecture Interruption
+          </div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition">
+<div>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-DEFAULT mb-space-md text-primary">
+<span class="material-symbols-outlined text-[24px]">history_edu</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Discrepancy & Audit Trail</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every status entry carries an immutable cryptographic receipt. Professors can manually override statuses with full multi-party audit justification.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-technical text-label-technical text-primary font-bold tracking-wider uppercase">
+            Signed Cryptographic Proofs
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Technical Workflow ("How It Operates") -->
+<section class="w-full py-space-xl px-margin max-w-7xl mx-auto" id="workflow">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">Verification Lifecycle</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Autonomous 4-Stage Protocol</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        From intake onboarding to registrar archival records in under one second.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Step 1 -->
+<div class="bg-surface-container p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-primary mb-space-sm">01</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs">5-Angle Enrollment</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            During campus matriculation, students undergo a guided 20-second camera rotation. Facial geometry is transformed directly into an encrypted mathematical hash.
+          </p>
+</div>
+<div class="mt-space-md bg-surface-container-high p-space-xs rounded text-center font-label-technical text-label-technical text-on-surface-variant uppercase">
+          One-Time Onboarding
+        </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-primary mb-space-sm">02</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Doorway Scan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            As students pass classroom threshold checkpoints, localized wide-angle optical sensors isolate face perimeters within 1.8 to 3.2 meters distance.
+          </p>
+</div>
+<div class="mt-space-md bg-surface-container-high p-space-xs rounded text-center font-label-technical text-label-technical text-on-surface-variant uppercase">
+          Contactless Throughput
+        </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-primary mb-space-sm">03</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Neural Ingestion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            The mathematical embedding is cross-referenced with the section enrollment index in sub-40 milliseconds using accelerated INT8 matrix engines.
+          </p>
+</div>
+<div class="mt-space-md bg-surface-container-high p-space-xs rounded text-center font-label-technical text-label-technical text-on-surface-variant uppercase">
+          < 40ms Matching Time
+        </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-primary mb-space-sm">04</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Ledger Sealing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Attendance marks are recorded as immutable tokens inside the registrar ledger. Immediate notifications ping the student's mobile portal.
+          </p>
+</div>
+<div class="mt-space-md bg-surface-container-high p-space-xs rounded text-center font-label-technical text-label-technical text-on-surface-variant uppercase">
+          Sync Complete
+        </div>
+</div>
+</div>
+</section>
+<!-- Section 5: Real-World Academic Benchmarks / Metrics -->
+<section class="w-full bg-primary text-on-primary py-space-xl px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-space-lg">
+<div>
+<span class="font-label-technical text-label-technical text-surface-dim uppercase tracking-widest">Empirical Field Telemetry</span>
+<h2 class="font-headline-lg text-headline-lg text-surface-bright tracking-tight mt-1">Campus Deployment Metrics</h2>
+</div>
+<p class="font-body-md text-body-md text-surface-dim max-w-md mt-space-sm lg:mt-0">
+          Audited figures gathered across undergraduate campuses, medicine anatomy labs, and postgraduate computer science facilities.
+        </p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter pt-space-md">
+<div class="bg-primary-container p-space-md rounded-DEFAULT">
+<div class="font-display-lg text-display-lg text-surface-bright font-bold">48,000+</div>
+<div class="font-headline-sm text-headline-sm text-surface-dim mt-space-xs">Verified Sessions</div>
+<p class="font-body-sm text-body-sm text-surface-dim mt-2">Classroom lectures, lab seminars, and proctored university examinations.</p>
+</div>
+<div class="bg-primary-container p-space-md rounded-DEFAULT">
+<div class="font-display-lg text-display-lg text-surface-bright font-bold">99.82%</div>
+<div class="font-headline-sm text-headline-sm text-surface-dim mt-space-xs">Landmark Accuracy</div>
+<p class="font-body-sm text-body-sm text-surface-dim mt-2">Tested against occlusion from eyeglasses, masks, and drastic lighting variances.</p>
+</div>
+<div class="bg-primary-container p-space-md rounded-DEFAULT">
+<div class="font-display-lg text-display-lg text-surface-bright font-bold">0.3s</div>
+<div class="font-headline-sm text-headline-sm text-surface-dim mt-space-xs">Terminal Throughput</div>
+<p class="font-body-sm text-body-sm text-surface-dim mt-2">Average walk-through recognition rate eliminating entrance hall queues.</p>
+</div>
+<div class="bg-primary-container p-space-md rounded-DEFAULT">
+<div class="font-display-lg text-display-lg text-surface-bright font-bold">14</div>
+<div class="font-headline-sm text-headline-sm text-surface-dim mt-space-xs">Colleges Active</div>
+<p class="font-body-sm text-body-sm text-surface-dim mt-2">From School of Architecture to Faculty of Medicine & Health Sciences.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Cryptographic Security & Privacy Section -->
+<section class="w-full py-space-xl px-margin max-w-7xl mx-auto" id="security">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest">Zero-Knowledge Compliance</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Mathematical Vectors, Never Raw Photography</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-md">
+          Unlike obsolete surveillance systems, Face Attendance does not retain student photos on campus servers. Optical data is instantly decomposed into 512-dimension vector representations.
+        </p>
+<div class="space-y-space-md mt-space-md">
+<div class="flex items-start space-x-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">shield</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Irreversible Extraction</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vector matrices cannot be reverse-engineered to reconstruct an identifiable facial portrait.</p>
+</div>
+</div>
+<div class="flex items-start space-x-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">lock</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Hardware Security Enclaves</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Decentralized campus edge nodes store local cohort vectors in AES-256 encrypted hardware modules.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-surface-container p-space-lg rounded-DEFAULT shadow-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-high -mx-space-lg -mt-space-lg px-space-lg pt-space-md">
+<span class="font-label-technical text-label-technical text-primary uppercase font-bold">Vector Transformation Pipeline</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">SHA-512 ENCRYPTED</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface p-space-md rounded-DEFAULT">
+<span class="font-label-technical text-label-technical text-on-surface-variant block mb-1">ORIGINAL FRAME SCAN (TRANSIENT)</span>
+<div class="w-full h-32 bg-surface-container-high rounded flex items-center justify-center text-center p-2">
+<span class="font-label-technical text-label-technical text-on-surface-variant">[Buffer Cleared After 40ms Ingestion]</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">Discarded in volatile RAM upon mathematical landmark extraction.</p>
+</div>
+<div class="bg-surface p-space-md rounded-DEFAULT">
+<span class="font-label-technical text-label-technical text-on-surface-variant block mb-1">STORED 512-D VECTOR (PERMANENT)</span>
+<div class="w-full h-32 bg-surface-container-highest rounded p-2 overflow-hidden font-label-technical text-label-technical text-primary leading-none space-y-1">
+<div class="truncate">v001: 0.12984, -0.98412, 0.44910, 0.00391</div>
+<div class="truncate">v002: 0.49019, 0.28491, -0.39014, 0.81920</div>
+<div class="truncate">v003: -0.19830, 0.99182, 0.14981, -0.04918</div>
+<div class="truncate">v004: 0.84910, -0.18204, 0.49012, 0.39104</div>
+<div class="truncate">... [508 remaining coefficients]</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">Mathematical abstraction strictly used for cosine similarity lookup.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Final Institutional Call to Action -->
+<section class="w-full bg-surface-container-high py-space-xl px-margin">
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center rounded-DEFAULT mb-space-md">
+<span class="material-symbols-outlined text-[28px]">school</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+        Modernize Campus Attendance Infrastructure
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm max-w-xl">
+        Deploy plug-and-play biometric hardware across your lecture facilities or integrate directly with existing IP camera setups via our high-speed vector SDK.
+      </p>
+<div class="pt-space-md flex flex-wrap gap-space-md justify-center">
+<button class="px-space-xl py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded-DEFAULT hover:bg-primary-container transition shadow-md">
+          Request Department Pilot Kit
+        </button>
+<button class="px-space-xl py-space-sm bg-surface text-primary font-label-lg text-label-lg rounded-DEFAULT hover:bg-surface-container-lowest transition shadow-sm">
+          Download Technical Whitepaper
+        </button>
+</div>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-widest mt-space-lg">
+        Compatible with Banner • Canvas LMS • Moodle • Blackboard Learn
+      </span>
+</div>
+</section>
+<!-- Editorial Institutional Footer -->
+<footer class="w-full bg-surface-container-low px-margin py-space-xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-lg">
+<div class="space-y-space-sm">
+<div class="flex items-center space-x-space-xs">
+<div class="w-6 h-6 bg-primary text-on-primary flex items-center justify-center rounded-DEFAULT font-headline-sm text-[14px]">
+            FA
+          </div>
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">Face Attendance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Academic facial recognition and real-time biometric roll ledger systems designed for modern higher education institutions.
+        </p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-space-sm">System Modules</h5>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Hallway Gateway Scanner</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Lecture Tablet Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Registrar SIS Connector</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Audit Log Explorer</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-space-sm">Governance</h5>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">FERPA Architecture Compliance</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">GDPR Article 9 Exceptions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Student Opt-Out Protocols</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cryptographic Proof Keys</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-space-sm">Department Dispatch</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Central Office of Academic Computing<br/>
+          Building 4, University Quadrangle<br/>
+          support@faceattendance.ac.edu
+        </p>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">SYSTEM STATUS: OPTICAL ENGINE OPTIMAL</span>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-space-md flex flex-col md:flex-row items-center justify-between text-on-surface-variant font-label-technical text-label-technical">
+<div>© 2025 Face Attendance System Inc. Distributed under Academic Security License v4.</div>
+<div class="flex space-x-space-md mt-space-sm md:mt-0">
+<a class="hover:text-primary" href="#">Terms of Verification</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Institutional Disclosure</a>
+</div>
+</div>
+</footer>
+</div></main></body></html>

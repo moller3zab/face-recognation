@@ -1,0 +1,10 @@
+/config/database.php
+/scratch/
+/work/
+/storage/logs/*
+/storage/cache/*
+/storage/sessions/*
+/public/uploads/*
+.env
+.env.*
+!.env.example

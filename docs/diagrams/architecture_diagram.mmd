@@ -1,0 +1,39 @@
+graph TD
+    subgraph ClientLayer["Client Layer (Browser)"]
+        UI["HTML5 / CSS3 / Vanilla JS Views"]
+        FaceApi["face-api.js (Local ML Models)"]
+        Landmarks["68 Landmark Yaw Liveness Detector"]
+        WebRTC["WebRTC Camera Stream"]
+    end
+
+    subgraph ServerLayer["Server Architecture (PHP 8.2 MVC)"]
+        FC["public/index.php (Single Front Controller)"]
+        Router["Core Router & Auth/Role Middleware"]
+        Controllers["Controller Layer (Auth, User, Admin, Attendance, Reports, Corrections)"]
+        Services["Service Business Logic (AuthService, AttendanceService, FaceRecognitionService, ReportService)"]
+        Repos["Repository SQL Layer (UserRepository, AttendanceRepository, FaceDataRepository, SettingRepository)"]
+        Models["Entity Models (User, Attendance, FaceData, CorrectionRequest, Alert, Setting, MenuItem)"]
+    end
+
+    subgraph StorageLayer["Data & Assets Layer (XAMPP / Local Disk)"]
+        DB[("MariaDB Database (face_attendance)")]
+        ModelsStorage["Local Models (assets/models/*.json, *.bin)"]
+        UploadsStorage["File Uploads (storage/uploads/)"]
+        LogsStorage["System Logs (storage/logs/)"]
+    end
+
+    WebRTC --> Landmarks
+    Landmarks --> FaceApi
+    FaceApi -->|"128-d Vector (POST JSON)"| FC
+    UI -->|"HTTP Request / Form POST"| FC
+
+    FC --> Router
+    Router --> Controllers
+    Controllers --> Services
+    Services --> Repos
+    Repos <--> Models
+    Repos <-->|"PDO Prepared Statements"| DB
+
+    Controllers -.->|"Logging Errors"| LogsStorage
+    Controllers -.->|"Save User Photos"| UploadsStorage
+    FaceApi -.->|"Load Weight Binaries"| ModelsStorage

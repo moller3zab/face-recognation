@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Face Attendance System</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px;">
+
+  <div class="card" style="width: 100%; max-width: 420px; padding: 36px; box-shadow: var(--shadow-lg);">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="logo-icon" style="margin: 0 auto 12px; width: 44px; height: 44px; font-size: 1.4rem;">FA</div>
+      <h2>Welcome Back</h2>
+      <p style="color: var(--c-slate); font-size: 0.9rem; margin-top: 4px;">Sign in to access your attendance ledger</p>
+    </div>
+
+    <form action="admin/dashboard.html" method="GET">
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input type="email" id="email" class="form-control" placeholder="user@faceattendance.local" required value="admin@faceattendance.local">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="••••••••" required value="Admin@12345">
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; font-size: 0.85rem;">
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--c-slate);">
+          <input type="checkbox" checked style="accent-color: var(--c-ink);"> Remember me
+        </label>
+        <a href="#" style="color: var(--c-ink); font-weight: 600;">Forgot password?</a>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px;">Sign In as Admin</button>
+        <a href="user/dashboard.html" class="btn btn-secondary" style="width: 100%; padding: 12px;">Sign In as User Demo</a>
+      </div>
+    </form>
+
+    <div style="text-align: center; margin-top: 24px; font-size: 0.88rem; color: var(--c-slate);">
+      Don't have an account? <a href="register.html" style="font-weight: 600; color: var(--c-ink);">Create account</a>
+    </div>
+  </div>
+
+</body>
+</html>

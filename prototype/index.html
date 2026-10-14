@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Attendance — Smart Attendance Powered by Your Face</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .landing-hero {
+      padding: 100px 28px 80px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--c-paper);
+      border: 1px solid var(--c-stone-soft);
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--c-ink);
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--c-ink);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--c-slate);
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .features-section {
+      padding: 80px 28px;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header style="background: var(--c-paper); border-bottom: 1px solid var(--c-stone-soft); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div class="logo-icon">FA</div>
+      <div>
+        <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem;">FaceAttendance</div>
+        <div style="font-size: 0.72rem; color: var(--c-stone); text-transform: uppercase;">Biometric Ledger</div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <a href="login.html" class="btn btn-secondary">Login</a>
+      <a href="register.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="landing-hero reveal">
+    <div class="hero-badge">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--c-status-present);"></span>
+      Next-Gen University Attendance Platform
+    </div>
+    <h1 class="hero-title">Smart Attendance.<br>Powered by Your Face.</h1>
+    <p class="hero-subtitle">
+      Eliminate proxy attendance, automate check-ins, and streamline HR reporting with server-verified 128-dimensional biometric recognition.
+    </p>
+    <div class="hero-actions">
+      <a href="register.html" class="btn btn-primary" style="padding: 14px 28px; font-size: 1rem;">Register Account</a>
+      <a href="login.html" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1rem;">Member Portal</a>
+    </div>
+  </section>
+
+  <!-- Feature Showcase -->
+  <section class="features-section reveal">
+    <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+      <h2>Designed for Speed, Privacy & Precision</h2>
+      <p style="color: var(--c-slate); margin-top: 8px;">Everything you need for seamless university and corporate workforce attendance.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="card">
+        <div class="stat-icon present" style="margin-bottom: 16px;">
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 10l-4 4l-2 -2"/><path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18z"/></svg>
+        </div>
+        <h3>Real-Time Face Scan</h3>
+        <p style="color: var(--c-slate); font-size: 0.92rem; margin-top: 8px;">Lightning-fast recognition in under 3 seconds using local 128-d descriptor vectors.</p>
+      </div>
+
+      <div class="card">
+        <div class="stat-icon late" style="margin-bottom: 16px;">
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 9v4l3 3"/><path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18z"/></svg>
+        </div>
+        <h3>Head-Turn Liveness</h3>
+        <p style="color: var(--c-slate); font-size: 0.92rem; margin-top: 8px;">Protects against photo spoofing using 68-point facial landmark yaw challenges.</p>
+      </div>
+
+      <div class="card">
+        <div class="stat-icon absent" style="margin-bottom: 16px;">
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        </div>
+        <h3>Biometric Data Privacy</h3>
+        <p style="color: var(--c-slate); font-size: 0.92rem; margin-top: 8px;">Zero raw face photos stored on server. Biometric vectors remain strictly encrypted.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Demo Links (Prototype Hub) -->
+  <section style="background: var(--c-paper); border-top: 1px solid var(--c-stone-soft); padding: 48px 28px; text-align: center;">
+    <h3>Prototype Page Navigation Hub</h3>
+    <p style="color: var(--c-slate); margin-bottom: 24px;">Explore static prototype views for all role scopes:</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin: 0 auto;">
+      <a href="admin/dashboard.html" class="btn btn-secondary btn-sm">Admin Dashboard</a>
+      <a href="admin/users.html" class="btn btn-secondary btn-sm">Admin Users CRUD</a>
+      <a href="admin/attendance.html" class="btn btn-secondary btn-sm">Admin Attendance</a>
+      <a href="admin/reports.html" class="btn btn-secondary btn-sm">Admin Reports</a>
+      <a href="admin/corrections.html" class="btn btn-secondary btn-sm">Admin Corrections</a>
+      <a href="admin/settings.html" class="btn btn-secondary btn-sm">Admin Settings</a>
+      <a href="user/dashboard.html" class="btn btn-secondary btn-sm">User Dashboard</a>
+      <a href="user/mark_attendance.html" class="btn btn-secondary btn-sm">Mark Attendance UI</a>
+      <a href="user/register_face.html" class="btn btn-secondary btn-sm">Register Face UI</a>
+      <a href="403.html" class="btn btn-secondary btn-sm">403 Page</a>
+      <a href="404.html" class="btn btn-secondary btn-sm">404 Page</a>
+      <a href="500.html" class="btn btn-secondary btn-sm">500 Page</a>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 24px; color: var(--c-slate); font-size: 0.85rem;">
+    &copy; 2026 Face Recognition Attendance System — Misr International University (MIU)
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

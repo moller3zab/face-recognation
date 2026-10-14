@@ -1,0 +1,28 @@
+sequenceDiagram
+    actor User as User / Admin
+    participant View as Login View
+    participant AuthCtrl as AuthController
+    participant AuthSvc as AuthService
+    participant UserRepo as UserRepository
+    participant DB as MariaDB Database
+
+    User->>View: Input email & password
+    View->>AuthCtrl: POST /login (email, password, csrf_token)
+    AuthCtrl->>AuthSvc: authenticate(email, password)
+    AuthSvc->>UserRepo: findByEmail(email)
+    UserRepo->>DB: SELECT * FROM users WHERE email = ? AND deleted_at IS NULL
+    DB-->>UserRepo: User Record Data
+    UserRepo-->>AuthSvc: User Entity
+    AuthSvc->>AuthSvc: password_verify(password, user.password)
+    alt Invalid Password or User Not Found
+        AuthSvc-->>AuthCtrl: return false
+        AuthCtrl-->>View: Render error message & increment rate-limit
+    else Password Match & Active Status
+        AuthSvc-->>AuthCtrl: return User Entity
+        AuthCtrl->>AuthCtrl: session_regenerate_id(true), store user_id & role
+        alt Role == 'admin'
+            AuthCtrl-->>User: Redirect to /admin/dashboard
+        else Role == 'user'
+            AuthCtrl-->>User: Redirect to /user/dashboard
+        end
+    end

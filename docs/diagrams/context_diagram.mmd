@@ -1,0 +1,15 @@
+graph TD
+    User["Standard User (Student / Employee)"]
+    Admin["System Administrator"]
+    Camera["WebRTC Camera Device"]
+    Cron["Windows Task Scheduler / CLI Cron"]
+    System["Face Recognition Attendance System (XAMPP / PHP MVC)"]
+    DB[("MariaDB Database (face_attendance)")]
+
+    User -->|"Web Camera Stream & Live Face Scanning"| System
+    User -->|"Submit Correction Requests & View History"| System
+    Admin -->|"Manage Users, Configure Settings & Review Requests"| System
+    Admin -->|"Generate Reports & Export HR CSV"| System
+    Camera -->|"Video Stream Frames (Local Browser Memory)"| System
+    Cron -->|"Trigger Daily Absence Processing"| System
+    System <-->|"PDO Prepared SQL Statements"| DB

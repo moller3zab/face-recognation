@@ -1,0 +1,27 @@
+sequenceDiagram
+    actor Trigger as CLI Cron / Admin Button
+    participant Script as generate_absences.php
+    participant AttSvc as AttendanceService
+    participant DB as MariaDB Database
+
+    Trigger->>Script: Run script with date parameter (YYYY-MM-DD)
+    Script->>AttSvc: processDailyAbsences(target_date)
+    AttSvc->>DB: SELECT date FROM holidays WHERE date = ?
+    alt Target Date is Official Holiday
+        DB-->>AttSvc: Holiday Found
+        AttSvc-->>Script: Skip processing (Holiday)
+    else Working Day
+        AttSvc->>DB: Check if Target Date matches configured weekend days
+        alt Target Date is Weekend
+            AttSvc-->>Script: Skip processing (Weekend)
+        else Active Working Day
+            AttSvc->>DB: SELECT id FROM users WHERE role='user' AND status='active' AND id NOT IN (SELECT user_id FROM attendance WHERE attendance_date=?)
+            DB-->>AttSvc: Array of Unrecorded Active User IDs
+            loop For Each Missing User
+                AttSvc->>DB: INSERT IGNORE INTO attendance (user_id, attendance_date, status) VALUES (?, ?, 'Absent')
+                AttSvc->>DB: INSERT INTO alerts (user_id, type, title, message) VALUES (?, 'Absent', ...)
+            end
+            AttSvc-->>Script: Absence Generation Complete (Count N)
+        end
+    end
+    Script-->>Trigger: Output Result Summary Log

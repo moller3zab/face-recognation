@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Face Baseline — Face Attendance</title>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">FA</div>
+        <div>
+          <div class="logo-text">FaceAttendance</div>
+          <div class="logo-sub">Student / User</div>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-label">My Navigation</li>
+        <li class="menu-item"><a href="dashboard.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg> Dashboard</a></li>
+        <li class="menu-item"><a href="mark_attendance.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 10l-4 4l-2 -2"/><path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18z"/></svg> Mark Attendance</a></li>
+        <li class="menu-item"><a href="register_face.html" class="menu-link active"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Register Face Baseline</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-avatar">JM</div>
+        <div class="user-info">
+          <div class="user-name">Jana Mohamed</div>
+          <div class="user-role">Student</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="navbar">
+        <div class="navbar-left">
+          <button class="mobile-toggle"><svg style="width:24px;height:24px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <div class="page-title-nav">Register Facial Biometric Baseline</div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="card reveal" style="max-width: 680px; margin: 0 auto; text-align: center;">
+          <div class="card-header" style="justify-content: center;">
+            <h3 class="card-title">Enroll Baseline Face Descriptor</h3>
+          </div>
+          <p style="color: var(--c-slate); font-size: 0.92rem; margin-bottom: 20px;">
+            Position your face directly in front of the camera. The scanner will capture 3–5 sample vectors and compute your baseline 128-d descriptor.
+          </p>
+
+          <div class="scanner-container">
+            <div class="corner-bracket corner-tl"></div>
+            <div class="corner-bracket corner-tr"></div>
+            <div class="corner-bracket corner-bl"></div>
+            <div class="corner-bracket corner-br"></div>
+            <div class="video-viewport" style="background: radial-gradient(circle at center, #393E46 0%, #222831 100%); display: flex; align-items: center; justify-content: center;">
+              <span style="color: var(--c-sand); font-weight: 600;">Sample Capture: 3 / 3 Complete</span>
+            </div>
+          </div>
+
+          <a href="dashboard.html" class="btn btn-primary" style="padding: 12px 28px;">Save Baseline Descriptor</a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+classDiagram
+    class Router {
+        -array routes
+        +add(method, path, handler, middlewares)
+        +dispatch(uri, method)
+    }
+
+    class Controller {
+        #render(view, data)
+        #json(data, statusCode)
+        #redirect(url)
+    }
+
+    class AuthController {
+        -AuthService authService
+        +login()
+        +processLogin()
+        +register()
+        +processRegister()
+        +logout()
+    }
+
+    class AttendanceController {
+        -AttendanceService attendanceService
+        -FaceRecognitionService faceService
+        +index()
+        +markView()
+        +checkIn()
+        +checkOut()
+    }
+
+    class AdminController {
+        -UserService userService
+        -ReportService reportService
+        +dashboard()
+    }
+
+    class CorrectionController {
+        -AttendanceService attendanceService
+        +index()
+        +store()
+        +approve()
+        +reject()
+    }
+
+    class AuthService {
+        -UserRepository userRepo
+        +authenticate(email, password)
+        +registerUser(data)
+    }
+
+    class AttendanceService {
+        -AttendanceRepository attendanceRepo
+        -UserRepository userRepo
+        -AlertRepository alertRepo
+        +processCheckIn(userId, status)
+        +processCheckOut(userId)
+        +generateAbsences(date)
+        +approveCorrection(requestId, note, adminId)
+    }
+
+    class FaceRecognitionService {
+        -FaceDataRepository faceDataRepo
+        -SettingsService settingsService
+        +verifyDistance(userId, liveDescriptor) float
+    }
+
+    class UserRepository {
+        +find(id) User
+        +findByEmail(email) User
+        +create(data) int
+        +update(id, data) bool
+        +delete(id) bool
+    }
+
+    class AttendanceRepository {
+        +findByUserAndDate(userId, date) Attendance
+        +create(data) int
+        +update(id, data) bool
+        +getUnclosedRecords(date) array
+    }
+
+    class FaceDataRepository {
+        +findByUserId(userId) FaceData
+        +saveDescriptor(userId, descriptorJson) bool
+    }
+
+    class User {
+        +int id
+        +string name
+        +string email
+        +string password
+        +string role
+        +string status
+    }
+
+    class Attendance {
+        +int id
+        +int userId
+        +string attendanceDate
+        +string checkIn
+        +string checkOut
+        +string status
+    }
+
+    class FaceData {
+        +int id
+        +int userId
+        +string faceDescriptor
+    }
+
+    Controller <|-- AuthController
+    Controller <|-- AttendanceController
+    Controller <|-- AdminController
+    Controller <|-- CorrectionController
+
+    AuthController --> AuthService
+    AttendanceController --> AttendanceService
+    AttendanceController --> FaceRecognitionService
+    AdminController --> AuthService
+    CorrectionController --> AttendanceService
+
+    AuthService --> UserRepository
+    AttendanceService --> AttendanceRepository
+    AttendanceService --> UserRepository
+    FaceRecognitionService --> FaceDataRepository
+
+    UserRepository ..> User
+    AttendanceRepository ..> Attendance
+    FaceDataRepository ..> FaceData

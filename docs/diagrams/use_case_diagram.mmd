@@ -1,0 +1,33 @@
+graph LR
+    subgraph SystemBoundary["Face Recognition Attendance System"]
+        UC1["UC-01: Register User Account"]
+        UC2["UC-02: Authenticate User & Session"]
+        UC3["UC-03: Register Face Baseline"]
+        UC4["UC-04: Mark Attendance (Check-In / Out)"]
+        UC5["UC-05: View Attendance Records"]
+        UC6["UC-06: Submit Correction Request"]
+        UC7["UC-07: Admin User Management & CSV Import"]
+        UC8["UC-08: Admin System Settings & Holidays"]
+        UC9["UC-09: Review & Approve Correction Request"]
+        UC10["UC-10: Admin Reports & CSV Export"]
+        UC11["UC-11: Automated Absence Generation"]
+        UC12["UC-12: System Alerts & Notifications"]
+    end
+
+    Guest["Public Visitor"] --> UC1
+    Guest --> UC2
+
+    User["Standard User"] --> UC2
+    User --> UC3
+    User --> UC4
+    User --> UC5
+    User --> UC6
+    User --> UC12
+
+    Admin["Administrator"] --> UC2
+    Admin --> UC7
+    Admin --> UC8
+    Admin --> UC9
+    Admin --> UC10
+    Admin --> UC11
+    Admin --> UC12

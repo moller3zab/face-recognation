@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile — Face Attendance</title>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">FA</div>
+        <div>
+          <div class="logo-text">FaceAttendance</div>
+          <div class="logo-sub">Student / User</div>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-label">My Navigation</li>
+        <li class="menu-item"><a href="dashboard.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg> Dashboard</a></li>
+        <li class="menu-item"><a href="profile.html" class="menu-link active"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg> My Profile</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-avatar">JM</div>
+        <div class="user-info">
+          <div class="user-name">Jana Mohamed</div>
+          <div class="user-role">Student</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="navbar">
+        <div class="navbar-left">
+          <button class="mobile-toggle"><svg style="width:24px;height:24px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <div class="page-title-nav">My Profile & Account Preferences</div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="card reveal" style="max-width: 620px;">
+          <div class="card-header">
+            <h3 class="card-title">Personal Info</h3>
+            <span class="badge badge-present">Registered Biometric Baseline</span>
+          </div>
+          <form>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" value="Jana Mohamed">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" value="jana@miu.edu.eg" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" value="+20 100 123 4567">
+            </div>
+            <button type="button" class="btn btn-primary">Save Profile Changes</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

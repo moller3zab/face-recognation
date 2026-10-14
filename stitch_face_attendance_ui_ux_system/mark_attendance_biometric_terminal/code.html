@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"inverse-on-surface":"#f6f0e4","on-tertiary-container":"#998e7d","on-background":"#1d1c14","on-primary-container":"#898f9a","on-primary-fixed-variant":"#414751","on-tertiary":"#ffffff","on-primary-fixed":"#161c25","surface-tint":"#595f69","tertiary-container":"#2e271b","surface":"#fff9ed","surface-container-highest":"#e8e2d6","surface-container-lowest":"#ffffff","on-error-container":"#93000a","outline":"#75777c","tertiary-fixed":"#eee1ce","inverse-surface":"#333028","error-container":"#ffdad6","on-surface":"#1d1c14","tertiary-fixed-dim":"#d2c5b3","on-surface-variant":"#45474b","surface-bright":"#fff9ed","secondary-fixed":"#dee2ed","background":"#fff9ed","on-secondary":"#ffffff","surface-container-high":"#ede8dc","on-tertiary-fixed-variant":"#4e4638","primary":"#0d131c","secondary-fixed-dim":"#c2c7d0","primary-fixed":"#dde3ef","on-error":"#ffffff","error":"#ba1a1a","outline-variant":"#c5c6cb","surface-variant":"#e8e2d6","inverse-primary":"#c1c7d3","surface-container-low":"#f9f3e7","on-secondary-fixed":"#171c23","secondary-container":"#dee2ed","on-primary":"#ffffff","on-tertiary-fixed":"#211b0f","tertiary":"#191308","on-secondary-container":"#60656d","surface-dim":"#dfd9ce","on-secondary-fixed-variant":"#42474f","surface-container":"#f3ede1","primary-fixed-dim":"#c1c7d3","secondary":"#5a5f67","primary-container":"#222831"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","margin":"2rem"},"fontFamily":{"headline-md":["Bricolage Grotesque"],"label-technical":["Inter"],"display-lg-mobile":["Bricolage Grotesque"],"headline-sm":["Bricolage Grotesque"],"headline-lg":["Bricolage Grotesque"],"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Bricolage Grotesque"],"body-sm":["Inter"],"display-lg":["Bricolage Grotesque"],"label-lg":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-technical":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(34,40,49,0.06)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Face Attendance Biometric Brandmark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeOMPZgJ6eSB8xAJGvqIySdI5NBBFSB9uYmaEbRWck5xIXkxlcAqFB5JJCYUmwINZtwJReSzN-HgC2R9qSkeIWEDTH0kxux4kV-jRUQyB50TBx5YBZLvU1-rt5dsLKwAPHHT-lIfzm007I2iogdXvnaUPfuH7bAqu8N_IqY4Jdm8JgeA3b2-R453pAzBohyVVXbYDYgr84XJkJjrIPg2ta-9ix62j3Ip4pFpgINR9BcuS5XbHOCk55pUI"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Face Attendance</span><span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider mt-0.5">Academic Biometric Ledger</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-lg"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-technical text-label-technical text-on-surface uppercase">Biometric Engine: Active / Online</span></div><button aria-label="Notifications" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-md pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqU5VoC-gB4l2eWpON5EUaQ5UW65TZwKONBv085kdMa7hJf_7bKxi4ljDXx8ZMd261Eb-IeCRZqcFpRYCo8zFZFagwJNLUeKx2lMvqa5GjYTofbhnaFz9WAMgMoF1v8ncZ9gO7JErumCuTohhFPQSWvHULvkrUeqOdX60q3_dkctFfnDn9yaSSkiFrT-x4GLbvQzmxd7ITz7HGSTP459USvmI1nKigjQgd3kSa_1gP0r3LYb627Y3d"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-snug">Dr. Elena Rostova</span><span class="font-label-technical text-label-technical text-on-surface-variant">Dept. of Computer Science</span></div><div class="hidden sm:flex items-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low z-40 flex flex-col py-space-md shadow-[0_1px_8px_rgba(34,40,49,0.04)] overflow-y-auto"><div class="px-space-md mb-space-sm"><span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider">User Section</span></div><nav class="px-space-sm space-y-1 mb-space-lg" data-active-classes="bg-primary-container text-on-primary font-label-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-all bg-primary-container text-on-primary font-label-lg shadow-sm" data-path="mark-attendance" href="#"><span class="material-symbols-outlined text-[18px]">center_focus_strong</span><span>Mark Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="register-face" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Register Face</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="my-attendance" href="#"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span><span>My Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="correction-requests" href="#"><span class="material-symbols-outlined text-[18px]">edit_calendar</span><span>Correction Requests</span></a></nav><div class="px-space-md mb-space-sm"><span class="font-label-technical text-label-technical text-on-surface-variant uppercase tracking-wider">Administrative Console</span></div><nav class="px-space-sm space-y-1 flex-1" data-active-classes="bg-primary-container text-on-primary font-label-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="admin-overview" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>Admin Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="directory-and-users" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Directory & Users</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="master-attendance" href="#"><span class="material-symbols-outlined text-[18px]">table_chart</span><span>Master Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="biometric-logs-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Biometric Logs & Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>System Settings</span></a></nav><div class="px-space-md pt-space-sm"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-technical text-label-technical text-on-surface-variant">TERMINAL</span><span class="font-label-technical text-label-technical text-on-surface font-bold">BUILD-74.9F</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">terminal</span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface min-h-screen px-gutter py-space-xl"><div class="flex flex-col w-full">
+<!-- Top Academic Context Bar -->
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-y-space-sm">
+<div class="flex items-center gap-space-xs font-label-technical text-label-technical uppercase tracking-wider text-on-surface-variant">
+<span>Academic Ledger</span>
+<span class="text-on-surface-variant/40">/</span>
+<span class="text-primary font-bold">Mark Attendance</span>
+<span class="text-on-surface-variant/40">/</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold tracking-normal">STATION 02</span>
+</div>
+<!-- Mode Switcher -->
+<div class="inline-flex p-1 bg-surface-container rounded-full shadow-sm">
+<button class="flex items-center gap-1.5 px-4 py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary transition-all duration-150" id="mode-checkin" onclick="switchMode('in')">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-bright"></span>
+<span>Check In</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-150" id="mode-checkout" onclick="switchMode('out')">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Check Out</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pt-space-xs">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Biometric Attendance Terminal</h1>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">school</span>
+<strong class="font-medium text-on-surface">CS-402</strong> Advanced Distributed Algorithms
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">meeting_room</span>
+            Lecture Hall B-104 (Rig 02)
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 font-label-technical text-label-technical uppercase tracking-wider text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Sync: 38ms Local Node
+          </span>
+</div>
+</div>
+<!-- Station Audio/Video Toggle -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant" id="audio-icon">volume_up</span>
+<span class="font-label-technical text-label-technical uppercase text-on-surface-variant">Audio Cue</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full bg-primary transition-colors focus:outline-none" id="audio-toggle-btn" onclick="toggleAudioCue()" role="switch">
+<span class="pointer-events-none inline-block h-3.5 w-3.5 translate-x-4 rounded-full bg-surface-bright shadow transform transition ease-in-out duration-200 mt-[3px] ml-[3px]" id="audio-toggle-indicator"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Workspace: 12-Column Asymmetric Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT 7 COLS: The Live Optical Viewfinder Engine -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Viewfinder Shell with Deep Ink Aesthetic & Precision Corner Reticles -->
+<div class="relative w-full aspect-[4/3] sm:aspect-[16/11] bg-primary-container rounded-xl overflow-hidden shadow-xl p-2 sm:p-3 flex flex-col justify-between">
+<!-- Synthetic Live Camera Mockup Stream -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center filter contrast-[1.05] brightness-95" data-alt="Photorealistic close up portrait of female professor Dr. Elena Rostova facing forward in university lecture hall, subtle soft cinematic depth of field, warm ambient library lighting, neutral expression for biometric facial scan, sharp facial detail, archival scholarly aesthetic with beige and ink undertones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx6x3Ke_XMk11br161v-yVxI5d1YQ4XjHJRhJ-V-KEH8C1MmtB3Jvot0-7U3zdKYy5wTKl2KxVarrIZpjwUzfrQqgwBfcdSG3eGcD2Tjvw-YuOWR5O-fylqyaFhjzypttyjXYAY0lbh0BgZlO56H426OMhJBpjNw6a5WnJ8u_IG3LIzsiISK4ZqLuiRdzQt3hW14tYdN2kT4oz6QejG0wDjIPjgq_hY1xfd31hn060ZxPU-xsbSfNV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/40"></div>
+</div>
+<!-- Animated Laser Scan Sweep Line -->
+<div class="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+<div class="w-full h-24 bg-gradient-to-b from-transparent via-tertiary-fixed/20 to-transparent -translate-y-full animate-[scanSweep_3.8s_easeInOut_infinite]">
+<div class="w-full h-[1.5px] bg-tertiary-fixed shadow-[0_0_12px_#eee1ce]"></div>
+</div>
+</div>
+<!-- Telemetry Header Overlay -->
+<div class="relative z-20 flex items-center justify-between px-space-sm pt-space-xs text-on-primary">
+<div class="flex items-center gap-2 px-2.5 py-1 rounded bg-primary/75 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-surface-bright animate-pulse"></span>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-surface-bright">LIVE FEED // SENSOR RIG 02</span>
+</div>
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-primary/75 backdrop-blur-md font-label-technical text-label-technical tracking-widest text-tertiary-fixed">
+<span>60 FPS</span>
+<span class="text-on-primary-container">|</span>
+<span>1080P NEURAL STREAM</span>
+</div>
+</div>
+<!-- Center Biometric Target Reticle and Face Mesh Graphic -->
+<div class="relative z-20 mx-auto my-auto w-64 h-72 sm:w-72 sm:h-80 flex flex-col items-center justify-center pointer-events-none">
+<!-- Outer Corner Reticles -->
+<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-tertiary-fixed"></div>
+<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-tertiary-fixed"></div>
+<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-tertiary-fixed"></div>
+<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-tertiary-fixed"></div>
+<!-- Subtle SVG Mesh Coordinates Overlay -->
+<svg class="absolute inset-0 w-full h-full text-tertiary-fixed/70 drop-shadow-[0_0_4px_rgba(238,225,206,0.5)]" fill="none" viewbox="0 0 288 320">
+<!-- Facial Oval Landmark -->
+<ellipse cx="144" cy="155" opacity="0.4" rx="72" ry="98" stroke="currentColor" stroke-dasharray="3 3" stroke-width="0.8"></ellipse>
+<!-- Eye Alignment Axis -->
+<line opacity="0.6" stroke="currentColor" stroke-dasharray="2 4" stroke-width="0.5" x1="88" x2="200" y1="135" y2="135"></line>
+<!-- Left Eye Landmark Box -->
+<rect fill="currentColor" fill-opacity="0.08" height="14" rx="2" stroke="currentColor" stroke-width="1" width="22" x="104" y="128"></rect>
+<circle cx="115" cy="135" fill="currentColor" r="2"></circle>
+<!-- Right Eye Landmark Box -->
+<rect fill="currentColor" fill-opacity="0.08" height="14" rx="2" stroke="currentColor" stroke-width="1" width="22" x="162" y="128"></rect>
+<circle cx="173" cy="135" fill="currentColor" r="2"></circle>
+<!-- Nose Ridge Bridge -->
+<path d="M 144 135 L 144 172 L 138 182 L 150 182 Z" fill="none" opacity="0.6" stroke="currentColor" stroke-width="0.9"></path>
+<!-- Mouth Coordinates -->
+<path d="M 122 210 Q 144 220 166 210 Q 144 226 122 210 Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="0.9"></path>
+<!-- Triangulation Nodes -->
+<line opacity="0.5" stroke="currentColor" stroke-width="0.5" x1="115" x2="144" y1="135" y2="172"></line>
+<line opacity="0.5" stroke="currentColor" stroke-width="0.5" x1="173" x2="144" y1="135" y2="172"></line>
+<line opacity="0.5" stroke="currentColor" stroke-width="0.5" x1="144" x2="144" y1="172" y2="210"></line>
+<!-- Dynamic Confidence Ring -->
+<circle class="animate-[spin_40s_linear_infinite]" cx="144" cy="155" opacity="0.25" r="118" stroke="currentColor" stroke-dasharray="14 8" stroke-width="1.5"></circle>
+</svg>
+<!-- Centered Realtime Locking Badge -->
+<div class="mt-auto mb-2 px-3 py-1 rounded bg-primary/85 backdrop-blur-md flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-tertiary-fixed text-[14px]">lock</span>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-tertiary-fixed">TARGET LOCKED: ROSTOVA, E.</span>
+</div>
+</div>
+<!-- Liveness Protocol Directional Challenge Banner -->
+<div class="relative z-20 w-full mb-space-xs">
+<div class="bg-surface/90 backdrop-blur-md rounded-lg p-2.5 flex items-center justify-between text-on-surface shadow-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-tertiary-fixed shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-[18px]">turn_left</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-technical text-label-technical uppercase tracking-wider text-primary font-bold">Liveness Challenge</span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Step 2 of 2</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Turn head <strong class="font-semibold text-primary">SLIGHTLY LEFT</strong> to conclude biometric 3D depth parity</span>
+</div>
+</div>
+<!-- Radial Progress Micro-meter -->
+<div class="flex items-center gap-2">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 transform -rotate-90">
+<circle class="text-surface-container-high" cx="16" cy="16" fill="none" r="13" stroke="currentColor" stroke-width="2.5"></circle>
+<circle class="text-primary" cx="16" cy="16" fill="none" r="13" stroke="currentColor" stroke-dasharray="81.6" stroke-dashoffset="14.6" stroke-linecap="round" stroke-width="2.5"></circle>
+</svg>
+<span class="absolute font-label-technical text-[9px] font-bold text-primary">82%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Telemetry HUD Strip -->
+<div class="relative z-20 grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 bg-primary/90 backdrop-blur-md rounded-lg px-3 py-2 text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-tertiary-fixed-dim uppercase tracking-wider">CONFIDENCE</span>
+<span class="font-label-lg text-label-lg font-bold text-surface-bright tracking-tight">99.4%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-tertiary-fixed-dim uppercase tracking-wider">VECTOR DISTANCE</span>
+<span class="font-label-lg text-label-lg font-bold text-surface-bright tracking-tight">0.124 <span class="font-normal text-[11px] text-tertiary-fixed/70">(<0.35)</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-tertiary-fixed-dim uppercase tracking-wider">AMBIENT ILLUM</span>
+<span class="font-label-lg text-label-lg font-bold text-surface-bright tracking-tight">480 Lux <span class="font-normal text-[11px] text-tertiary-fixed/70">(Opt)</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-tertiary-fixed-dim uppercase tracking-wider">ANTI-SPOOF IR</span>
+<span class="font-label-lg text-label-lg font-bold text-surface-bright tracking-tight">PASSED <span class="font-normal text-[11px] text-tertiary-fixed/70">(0.998)</span></span>
+</div>
+</div>
+</div>
+<!-- Station Status Banner -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm p-space-md bg-surface-container rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Biometric Match Verified</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-technical text-label-technical uppercase tracking-wider text-primary font-bold">READY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Optical parity confirmed against University Faculty Ledger master hash.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1.5" onclick="recalibrateRig()">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Recalibrate</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT 5 COLS: Verification Decision & Station Telemetry -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Candidate Verification Profile Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical uppercase tracking-wider text-on-surface-variant">Identified Subject</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5" id="candidate-name">Dr. Elena Rostova</h2>
+<span class="font-label-technical text-label-technical text-secondary tracking-widest mt-0.5">UID: CS-FAC-882194</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-technical text-label-technical text-primary font-bold uppercase tracking-wider">
+            FACULTY LEAD
+          </span>
+</div>
+<!-- Archival vs Live Thumbnail Comparison Strip -->
+<div class="grid grid-cols-2 gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex flex-col gap-1.5">
+<div class="relative aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Formal university ID badge photograph of female academic scholar Elena Rostova, neutral academic portrait against warm studio cream backdrop, passport style archival framing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBZzLt3HUR0BqxkIYbLw0OF1dW6qUZKZZW8KlWZxyHA7zxuZMDIAf-5JBNiaWVHachXjDAF4F8Qng0ZO4rbT25Ns2U1LY99q866E9Rjr3il7bR268Hp-32xXjJyn5wwMP5vzThqgdliUevdhtcSM7lzN8DpN_YzN-muqJwMx7-Q7CpvQPzGrjoP84JmwrxoSaiI17E-I_J1MOiBABQyN7SPbbaqC7-sCLwg4abkeFaEDwtgDhY-NIs"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-primary/80 backdrop-blur font-label-technical text-[9px] text-tertiary-fixed tracking-wider uppercase">Archival Ref</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Enrolled: 2022</span>
+<span class="font-label-technical text-label-technical">ID: 8821</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="relative aspect-square w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up crop of real-time camera snapshot capturing Dr. Elena Rostova with facial biometric sensor coordinates overlay, warm lecture hall lighting, high clarity live capture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEgcF8TFJ10Rbmm02dhMh3VDD-u_18zSorMhvBFcux_TqsSTmPIdZfIfnPbIyXJE7fyDlEiuVlyYF7UdjQZpT1rYFN0OpvqH1Gk9cTcXmWdgVu8CNNLO5cq5ljbqBJiBbjtMsibEBLyhg5l7rAxR7wls8oltwln3o4jLGZEm7ocVIUIZoS7NFTqDlFYcIft1QOWGYyOPtzPRD9r0JNjGMKfqg3mU6zK154m3gPJXeO-nGnMSZKW5rY"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-primary/80 backdrop-blur font-label-technical text-[9px] text-tertiary-fixed tracking-wider uppercase">Frame #1429</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Timestamp</span>
+<span class="font-label-technical text-label-technical" id="live-time-stamp">09:14:22.08</span>
+</div>
+</div>
+</div>
+<!-- Subject Academic Metadata Roster -->
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm">
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-on-surface-variant">Department</span>
+<span class="font-medium text-on-surface">Computer Science & Informatics</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-on-surface-variant">Current Term Role</span>
+<span class="font-medium text-on-surface">Course Instructor (CS-402)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-on-surface-variant">Historical Punctuality</span>
+<span class="font-medium text-on-surface">99.2% (148/149 Lectures)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-on-surface-variant">Verification Protocol</span>
+<span class="font-label-technical text-label-technical uppercase text-on-surface">SHA-256 + 3D IR PASS</span>
+</div>
+</div>
+<!-- Authoritative Primary Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-3.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm tracking-normal flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]" id="commit-btn" onclick="commitAttendance()">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span id="commit-label">Commit & Record Attendance</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="flex-1 py-2 px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all text-center" onclick="overrideAttendance()">
+              Request Manual Override
+            </button>
+<button class="px-space-md py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" onclick="dismissCandidate()">
+              Skip Frame
+            </button>
+</div>
+</div>
+<!-- Security Ledger Notice -->
+<div class="flex items-center gap-2 pt-space-xs text-on-surface-variant font-label-technical text-label-technical">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Cryptographically committed to institutional ledger block #9802</span>
+</div>
+</div>
+<!-- Quick Session Live History Stream -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">history</span>
+<span class="font-headline-sm text-headline-sm text-primary">Live Scan Log</span>
+</div>
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Session: 34 Checked</span>
+</div>
+<!-- Ledger Stream List -->
+<div class="flex flex-col gap-1.5" id="history-stream">
+<!-- Row 1: Present -->
+<div class="flex items-center justify-between p-2 rounded bg-surface hover:bg-surface-container transition-all">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-primary">
+                MT
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary leading-tight">Marcus Thorne</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">CS-STU-4410 • 09:12:44</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-technical text-label-technical text-on-surface-variant hidden sm:inline">98.8% match</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-technical text-label-technical uppercase font-bold">
+                PRESENT
+              </span>
+</div>
+</div>
+<!-- Row 2: Late -->
+<div class="flex items-center justify-between p-2 rounded bg-surface hover:bg-surface-container transition-all">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-primary">
+                AL
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary leading-tight">Aria Lindqvist</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">CS-STU-3891 • 09:11:15</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-technical text-label-technical text-on-surface-variant hidden sm:inline">99.1% match</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-technical text-label-technical uppercase font-bold">
+                LATE (+11M)
+              </span>
+</div>
+</div>
+<!-- Row 3: Present -->
+<div class="flex items-center justify-between p-2 rounded bg-surface hover:bg-surface-container transition-all">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-primary">
+                DK
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary leading-tight">Devon Kim</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">CS-STU-5520 • 09:09:50</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-technical text-label-technical text-on-surface-variant hidden sm:inline">97.9% match</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-technical text-label-technical uppercase font-bold">
+                PRESENT
+              </span>
+</div>
+</div>
+<!-- Row 4: Present -->
+<div class="flex items-center justify-between p-2 rounded bg-surface hover:bg-surface-container transition-all">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md font-bold text-primary">
+                SZ
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary leading-tight">Sofia Zaytseva</span>
+<span class="font-label-technical text-label-technical text-on-surface-variant">CS-STU-2980 • 09:07:33</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-technical text-label-technical text-on-surface-variant hidden sm:inline">99.7% match</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-technical text-label-technical uppercase font-bold">
+                PRESENT
+              </span>
+</div>
+</div>
+</div>
+<!-- Ledger Footer Link -->
+<div class="pt-2 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-label-technical text-label-technical uppercase text-on-surface-variant">Audit Stream Active</span>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1" href="#">
+<span>View Full Register</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification / Verification Modal Feedback Anchor -->
+<div class="fixed bottom-6 right-6 max-w-sm bg-primary text-on-primary px-space-md py-space-sm rounded-lg shadow-2xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 z-50" id="status-toast">
+<span class="material-symbols-outlined text-surface-bright text-[22px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold" id="toast-title">Record Committed</span>
+<span class="font-body-sm text-body-sm text-tertiary-fixed-dim" id="toast-msg">Attendance recorded for Elena Rostova.</span>
+</div>
+</div>
+<style>
+    @keyframes scanSweep {
+      0% {
+        transform: translateY(-100%);
+      }
+      50% {
+        transform: translateY(320%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  </style>
+<script>
+    let currentMode = 'in';
+    let audioCueEnabled = true;
+
+    function switchMode(mode) {
+      currentMode = mode;
+      const inBtn = document.getElementById('mode-checkin');
+      const outBtn = document.getElementById('mode-checkout');
+      const commitLabel = document.getElementById('commit-label');
+
+      if (mode === 'in') {
+        inBtn.className = "flex items-center gap-1.5 px-4 py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary transition-all duration-150";
+        inBtn.firstElementChild.className = "w-1.5 h-1.5 rounded-full bg-surface-bright";
+        
+        outBtn.className = "flex items-center gap-1.5 px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-150";
+        outBtn.firstElementChild.className = "w-1.5 h-1.5 rounded-full bg-outline-variant";
+
+        commitLabel.innerText = "Commit & Record Check In";
+        showToast("Mode Changed", "Rig switched to Session Arrival Check In.");
+      } else {
+        outBtn.className = "flex items-center gap-1.5 px-4 py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary transition-all duration-150";
+        outBtn.firstElementChild.className = "w-1.5 h-1.5 rounded-full bg-surface-bright";
+
+        inBtn.className = "flex items-center gap-1.5 px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-150";
+        inBtn.firstElementChild.className = "w-1.5 h-1.5 rounded-full bg-outline-variant";
+
+        commitLabel.innerText = "Commit & Record Check Out";
+        showToast("Mode Changed", "Rig switched to Session Departure Check Out.");
+      }
+    }
+
+    function toggleAudioCue() {
+      audioCueEnabled = !audioCueEnabled;
+      const indicator = document.getElementById('audio-toggle-indicator');
+      const toggleBtn = document.getElementById('audio-toggle-btn');
+      const icon = document.getElementById('audio-icon');
+
+      if (audioCueEnabled) {
+        indicator.classList.remove('translate-x-0');
+        indicator.classList.add('translate-x-4');
+        toggleBtn.classList.remove('bg-outline-variant');
+        toggleBtn.classList.add('bg-primary');
+        icon.innerText = "volume_up";
+        showToast("Audio Cue Enabled", "Chime will play on facial match identification.");
+      } else {
+        indicator.classList.remove('translate-x-4');
+        indicator.classList.add('translate-x-0');
+        toggleBtn.classList.remove('bg-primary');
+        toggleBtn.classList.add('bg-outline-variant');
+        icon.innerText = "volume_off";
+        showToast("Audio Cue Muted", "Silent scanning mode active.");
+      }
+    }
+
+    function commitAttendance() {
+      const commitBtn = document.getElementById('commit-btn');
+      commitBtn.disabled = true;
+      commitBtn.classList.add('opacity-75');
+      commitBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+        <span>Hashing to Ledger...</span>
+      `;
+
+      setTimeout(() => {
+        // Prepend to history log
+        const log = document.getElementById('history-stream');
+        const now = new Date();
+        const timeStr = now.toTimeString().split(' ')[0];
+
+        const newRow = document.createElement('div');
+        newRow.className = "flex items-center justify-between p-2 rounded bg-surface-container-high transition-all animate-pulse";
+        newRow.innerHTML = `
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-label-md text-label-md font-bold text-on-primary">
+              ER
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-primary leading-tight font-bold">Dr. Elena Rostova</span>
+              <span class="font-label-technical text-label-technical text-on-surface-variant">CS-FAC-8821 • ${timeStr}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-label-technical text-label-technical text-on-surface-variant hidden sm:inline">99.4% match</span>
+            <span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-technical text-label-technical uppercase font-bold">
+              VERIFIED
+            </span>
+          </div>
+        `;
+
+        log.insertBefore(newRow, log.firstChild);
+
+        commitBtn.disabled = false;
+        commitBtn.classList.remove('opacity-75');
+        commitBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span>Attendance Recorded!</span>
+        `;
+
+        showToast("Attendance Recorded", "Dr. Elena Rostova stamped to Lecture CS-402.");
+
+        setTimeout(() => {
+          commitBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px]">check_circle</span>
+            <span>${currentMode === 'in' ? 'Commit & Record Check In' : 'Commit & Record Check Out'}</span>
+          `;
+          newRow.classList.remove('animate-pulse');
+        }, 2200);
+
+      }, 700);
+    }
+
+    function recalibrateRig() {
+      showToast("Sensor Calibration", "Re-centering stereo depth field & IR exposure.");
+    }
+
+    function overrideAttendance() {
+      showToast("Override Requested", "Administrative supervisor PIN required at Rig 02.");
+    }
+
+    function dismissCandidate() {
+      showToast("Frame Dismissed", "Scanning for subsequent subject in field of view.");
+    }
+
+    function showToast(title, msg) {
+      const toast = document.getElementById('status-toast');
+      document.getElementById('toast-title').innerText = title;
+      document.getElementById('toast-msg').innerText = msg;
+      
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    // Live millisecond ticker
+    setInterval(() => {
+      const tsElem = document.getElementById('live-time-stamp');
+      if (tsElem) {
+        const d = new Date();
+        const base = d.toTimeString().split(' ')[0];
+        const ms = String(d.getMilliseconds()).padStart(3, '0').slice(0, 2);
+        tsElem.innerText = `${base}.${ms}`;
+      }
+    }, 120);
+  </script>
+</div></main></div></body></html>

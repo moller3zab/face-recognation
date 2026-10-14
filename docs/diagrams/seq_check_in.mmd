@@ -1,0 +1,46 @@
+sequenceDiagram
+    actor User as User
+    participant Browser as Browser UI (Scanner & Landmark Yaw)
+    participant AttCtrl as AttendanceController
+    participant FaceSvc as FaceRecognitionService
+    participant AttSvc as AttendanceService
+    participant FaceRepo as FaceDataRepository
+    participant AttRepo as AttendanceRepository
+    participant DB as MariaDB Database
+
+    User->>Browser: Open /attendance/scan
+    Browser-->>User: Prompt Head-Turn Liveness Challenge ("Turn Left")
+    User->>Browser: Turn Head Left
+    Browser->>Browser: Detect Yaw Landmarks Transition -> Confirmed
+    Browser->>Browser: Extract Live 128-d Descriptor
+    Browser->>AttCtrl: POST /attendance/verify (live_descriptor, csrf_token)
+    AttCtrl->>FaceSvc: verifyDistance(user_id, live_descriptor)
+    FaceSvc->>FaceRepo: findByUserId(user_id)
+    FaceRepo->>DB: SELECT face_descriptor FROM face_data WHERE user_id = ?
+    DB-->>FaceRepo: Descriptor JSON
+    FaceRepo-->>FaceSvc: Baseline Vector
+    FaceSvc->>FaceSvc: Calculate Euclidean Distance (D) vs Threshold (0.60)
+    alt Distance > 0.60
+        FaceSvc-->>AttCtrl: Match Failed (Distance too high)
+        AttCtrl-->>Browser: JSON { success: false, error: "Facial Verification Failed" }
+    else Distance <= 0.60
+        FaceSvc-->>AttCtrl: Match Verified Success
+        AttCtrl->>AttSvc: processCheckIn(user_id, current_time)
+        AttSvc->>AttRepo: findByUserAndDate(user_id, today)
+        AttRepo->>DB: SELECT * FROM attendance WHERE user_id = ? AND attendance_date = TODAY
+        DB-->>AttRepo: Result Record
+        alt Record Already Exists
+            AttRepo-->>AttSvc: Existing Record
+            AttSvc-->>AttCtrl: Duplicate Check-In Blocked
+            AttCtrl-->>Browser: JSON { success: false, error: "Already checked in today" }
+        else No Existing Record
+            AttSvc->>AttSvc: Compare time vs rules (Present vs Late)
+            AttSvc->>AttRepo: create(user_id, date, time, status)
+            AttRepo->>DB: INSERT INTO attendance (user_id, attendance_date, check_in, status)
+            DB-->>AttRepo: Insert ID
+            AttRepo-->>AttSvc: Success
+            AttSvc-->>AttCtrl: Check-In Confirmed
+            AttCtrl-->>Browser: JSON { success: true, status: "Present", time: "08:45 AM" }
+            Browser-->>User: Display Verification Confirmation Screen
+        end
+    end

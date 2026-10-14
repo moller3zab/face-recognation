@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Inspection — Face Attendance</title>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">FA</div>
+        <div>
+          <div class="logo-text">FaceAttendance</div>
+          <div class="logo-sub">Admin Console</div>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-label">Main Navigation</li>
+        <li class="menu-item"><a href="dashboard.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg> Dashboard</a></li>
+        <li class="menu-item"><a href="users.html" class="menu-link active"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg> User Management</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-avatar">AD</div>
+        <div class="user-info">
+          <div class="user-name">Ahmed Mahmoud</div>
+          <div class="user-role">Administrator</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="navbar">
+        <div class="navbar-left">
+          <button class="mobile-toggle"><svg style="width:24px;height:24px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <div class="page-title-nav">User Profile: Jana Mohamed</div>
+        </div>
+        <div class="navbar-right">
+          <button class="btn btn-danger btn-sm" data-modal-target="reset-face-modal">Reset Face Baseline</button>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 24px;">
+          <!-- Profile Card -->
+          <div class="card reveal">
+            <div style="text-align: center; margin-bottom: 20px;">
+              <div class="user-avatar" style="width: 80px; height: 80px; font-size: 2rem; margin: 0 auto 12px;">JM</div>
+              <h3>Jana Mohamed</h3>
+              <p style="color: var(--c-slate); font-size: 0.88rem;">Software Engineering</p>
+              <span class="badge badge-present" style="margin-top: 8px;">Active Account</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--c-sand-light); padding-top: 16px; font-size: 0.9rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: var(--c-slate);">Identifier:</span>
+                <strong>2026-0914</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: var(--c-slate);">Email:</span>
+                <strong>jana@miu.edu.eg</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: var(--c-slate);">Face Baseline:</span>
+                <span class="badge badge-present">Registered (128-d)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attendance History Card -->
+          <div class="card reveal">
+            <div class="card-header">
+              <h3 class="card-title">Recent Attendance Logs</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2026-10-02</td>
+                    <td>08:45:12 AM</td>
+                    <td>05:02:10 PM</td>
+                    <td><span class="badge badge-present">Present</span></td>
+                  </tr>
+                  <tr>
+                    <td>2026-10-01</td>
+                    <td>09:12:44 AM</td>
+                    <td>05:00:00 PM</td>
+                    <td><span class="badge badge-late">Late</span></td>
+                  </tr>
+                  <tr>
+                    <td>2026-09-30</td>
+                    <td>08:50:00 AM</td>
+                    <td>05:10:22 PM</td>
+                    <td><span class="badge badge-present">Present</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Reset Face Modal -->
+  <div class="modal-overlay" id="reset-face-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Reset Biometric Face Data?</h3>
+        <button class="modal-close btn btn-secondary btn-sm">✕</button>
+      </div>
+      <p style="color: var(--c-slate); font-size: 0.9rem;">Are you sure you want to delete the registered 128-d face descriptor vector for <strong>Jana Mohamed</strong>? The user will be required to re-enroll their facial baseline.</p>
+      <div class="modal-footer">
+        <button class="modal-close btn btn-secondary">Cancel</button>
+        <button class="btn btn-danger">Confirm Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

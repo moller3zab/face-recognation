@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Correction Requests Queue — Face Attendance</title>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">FA</div>
+        <div>
+          <div class="logo-text">FaceAttendance</div>
+          <div class="logo-sub">Admin Console</div>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-label">Main Navigation</li>
+        <li class="menu-item"><a href="dashboard.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg> Dashboard</a></li>
+        <li class="menu-item"><a href="users.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg> User Management</a></li>
+        <li class="menu-item"><a href="attendance.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg> Attendance Logs</a></li>
+        <li class="menu-item"><a href="reports.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg> Reports & Export</a></li>
+        <li class="menu-item"><a href="corrections.html" class="menu-link active"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg> Corrections Queue</a></li>
+        <li class="menu-item"><a href="alerts.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg> System Alerts</a></li>
+        <li class="menu-item"><a href="settings.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg> System Settings</a></li>
+        <li class="menu-item"><a href="../login.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg> Logout</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-avatar">AD</div>
+        <div class="user-info">
+          <div class="user-name">Ahmed Mahmoud</div>
+          <div class="user-role">Administrator</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="navbar">
+        <div class="navbar-left">
+          <button class="mobile-toggle"><svg style="width:24px;height:24px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <div class="page-title-nav">Attendance Correction Requests</div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="card reveal">
+          <div class="card-header">
+            <h3 class="card-title">Pending Correction Approvals Queue</h3>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Request ID</th>
+                  <th>User Name</th>
+                  <th>Date</th>
+                  <th>Requested Check In/Out</th>
+                  <th>Reason Justification</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#CR-402</td>
+                  <td><strong>Jana Mohamed</strong></td>
+                  <td>2026-10-01</td>
+                  <td>Out: 05:00 PM</td>
+                  <td>Camera stream timed out during exit scan.</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td>
+                    <button class="btn btn-primary btn-sm" data-modal-target="review-modal">Review & Decision</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Review Modal -->
+  <div class="modal-overlay" id="review-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Review Correction #CR-402</h3>
+        <button class="modal-close btn btn-secondary btn-sm">✕</button>
+      </div>
+      <p style="font-size: 0.9rem; margin-bottom: 12px;"><strong>User:</strong> Jana Mohamed | <strong>Date:</strong> 2026-10-01</p>
+      <p style="font-size: 0.88rem; color: var(--c-slate); margin-bottom: 16px;"><strong>Reason:</strong> Camera stream timed out during exit scan.</p>
+      
+      <div class="form-group">
+        <label class="form-label">Admin Review Note</label>
+        <textarea class="form-control" rows="3" placeholder="e.g. Verified with security logs."></textarea>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-danger">Reject</button>
+        <button class="btn btn-primary">Approve Request</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

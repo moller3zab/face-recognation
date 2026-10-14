@@ -1,0 +1,99 @@
+erDiagram
+    users ||--o| face_data : "has baseline"
+    users ||--o{ attendance : "records"
+    users ||--o{ correction_requests : "submits"
+    users ||--o{ alerts : "receives"
+    attendance ||--o{ correction_requests : "has corrections"
+    menu_items ||--o{ menu_items : "parent child"
+
+    users {
+        int id PK
+        string name
+        string email UK
+        string password
+        enum role "admin, user"
+        string phone
+        string photo
+        string department
+        string identifier UK
+        enum status "active, inactive"
+        datetime deleted_at
+        datetime created_at
+        datetime updated_at
+    }
+
+    face_data {
+        int id PK
+        int user_id FK, UK
+        text face_descriptor
+        datetime created_at
+        datetime updated_at
+    }
+
+    attendance {
+        int id PK
+        int user_id FK
+        date attendance_date
+        time check_in
+        time check_out
+        enum status "Present, Late, Absent, Incomplete"
+        string recognition_method
+        datetime created_at
+        datetime updated_at
+    }
+
+    correction_requests {
+        int id PK
+        int user_id FK
+        int attendance_id FK
+        time requested_check_in
+        time requested_check_out
+        text reason
+        enum status "Pending, Approved, Rejected"
+        text admin_note
+        int reviewed_by FK
+        datetime reviewed_at
+        datetime created_at
+        datetime updated_at
+    }
+
+    alerts {
+        int id PK
+        int user_id FK
+        string type
+        string title
+        text message
+        boolean is_read
+        datetime created_at
+    }
+
+    settings {
+        int id PK
+        string key_name UK
+        text value
+        datetime updated_at
+    }
+
+    holidays {
+        int id PK
+        date date UK
+        string name
+    }
+
+    login_attempts {
+        int id PK
+        string email
+        string ip
+        datetime attempted_at
+    }
+
+    menu_items {
+        int id PK
+        int parent_id FK
+        string title
+        string url
+        string icon
+        enum role "admin, user, both"
+        int sort_order
+        boolean is_active
+    }

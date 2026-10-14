@@ -1,0 +1,21 @@
+sequenceDiagram
+    actor User as User
+    participant Browser as Browser UI (face-api.js)
+    participant RegCtrl as FaceRegistrationController
+    participant FaceRepo as FaceDataRepository
+    participant DB as MariaDB Database
+
+    User->>Browser: Open /face/register
+    Browser->>Browser: Request Camera Stream & Load Models
+    Browser-->>User: Display Live Video Scanning Frame
+    Browser->>Browser: Capture 3-5 Face Sample Vectors (128-d)
+    Browser->>Browser: Compute Average Descriptor Array
+    Browser->>RegCtrl: POST /face/store (descriptor_json, csrf_token)
+    RegCtrl->>RegCtrl: Validate CSRF & Session Auth
+    RegCtrl->>RegCtrl: Validate 128 Floats Format
+    RegCtrl->>FaceRepo: saveDescriptor(user_id, descriptor_json)
+    FaceRepo->>DB: INSERT INTO face_data (user_id, face_descriptor) VALUES (?, ?) ON DUPLICATE KEY UPDATE
+    DB-->>FaceRepo: Success OK
+    FaceRepo-->>RegCtrl: true
+    RegCtrl-->>Browser: Redirect to /user/profile with Success Flash
+    Browser-->>User: Display "Face Baseline Registered Successfully"

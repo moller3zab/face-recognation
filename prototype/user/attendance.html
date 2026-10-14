@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Attendance History — Face Attendance</title>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">FA</div>
+        <div>
+          <div class="logo-text">FaceAttendance</div>
+          <div class="logo-sub">Student / User</div>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-label">My Navigation</li>
+        <li class="menu-item"><a href="dashboard.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg> Dashboard</a></li>
+        <li class="menu-item"><a href="mark_attendance.html" class="menu-link"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 10l-4 4l-2 -2"/><path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18z"/></svg> Mark Attendance</a></li>
+        <li class="menu-item"><a href="attendance.html" class="menu-link active"><svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg> My Attendance History</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-avatar">JM</div>
+        <div class="user-info">
+          <div class="user-name">Jana Mohamed</div>
+          <div class="user-role">Student</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="navbar">
+        <div class="navbar-left">
+          <button class="mobile-toggle"><svg style="width:24px;height:24px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <div class="page-title-nav">My Attendance History</div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="card reveal">
+          <div class="card-header">
+            <h3 class="card-title">Attendance Records Log</h3>
+            <div style="display: flex; gap: 12px;">
+              <input type="month" class="form-control" value="2026-10" style="width: 160px;">
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Check In</th>
+                  <th>Check Out</th>
+                  <th>Status</th>
+                  <th>Recognition Method</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-10-02</td>
+                  <td>08:45:12 AM</td>
+                  <td>05:02:10 PM</td>
+                  <td><span class="badge badge-present">Present</span></td>
+                  <td>Face Recognition</td>
+                </tr>
+                <tr>
+                  <td>2026-10-01</td>
+                  <td>09:12:44 AM</td>
+                  <td>05:00:00 PM</td>
+                  <td><span class="badge badge-late">Late</span></td>
+                  <td>Face Recognition</td>
+                </tr>
+                <tr>
+                  <td>2026-09-30</td>
+                  <td>08:50:00 AM</td>
+                  <td>05:10:22 PM</td>
+                  <td><span class="badge badge-present">Present</span></td>
+                  <td>Face Recognition</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
